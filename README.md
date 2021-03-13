@@ -1,4 +1,4 @@
-#AutoMarket
+## AutoMarket
 
 This is a single page application using 
 React, 
@@ -8,8 +8,6 @@ for trading with automobiles, allowing different users to interact with each oth
 This 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
 
 In the project directory, you can run:
 
