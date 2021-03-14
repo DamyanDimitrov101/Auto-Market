@@ -1,4 +1,4 @@
-## AutoMarket
+# AutoMarket
 
 This is a single page application using  
 ### React,
