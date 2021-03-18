@@ -1,0 +1,205 @@
+.Main{
+    position: relative;
+    top: -26px;
+    z-index: 0;
+}
+
+.main-wrapper{
+    margin: 0 auto;
+    max-width: 1290px;
+    padding-top: 50px;
+    color: white;
+}
+
+
+/* WELCOME */
+
+
+.welcomeSection-wrapper{
+    background: linear-gradient(90deg, rgba(126,98,0,0.8645833333333334) 0%, rgba(167,171,88,0.8785889355742297) 35%, rgba(60, 63, 19, 0.859) 100%), url("../../assets/landingPage_Bg_1.jpg");
+
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+}
+
+.welcomeSection{
+    height: 550px;    
+    max-height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* CheckForOffers */
+
+.welcomeSection-CheckForOffers{
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+.welcomeSection-CheckForOffers-title{
+    text-transform: uppercase;
+    font-size: 38px;
+    margin-bottom: 20px;
+}
+
+
+.welcomeSection-CheckForOffers-more{
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.welcomeSection-CheckForOffers-showBtn{
+    border: none;
+    background:rgba(60, 63, 19, 0.859);
+    padding: 20px;
+    color: white;
+    font-size: 15px;
+    border-radius: 17px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.welcomeSection-CheckForOffers-showBtn::after{
+    content: '\f5de';
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-left: 10px;
+}
+
+.welcomeSection-CheckForOffers-showBtn:hover{
+    cursor: pointer;
+    font-size: 18px;
+    padding:17.5px 9px;
+    background:rgba(99, 102, 47, 0.859);
+}
+
+/* FindDealer */
+
+.welcomeSection-findLocalStore{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 100px;
+}
+
+.welcomeSection-findLocalStore-title{
+    margin-top: auto;
+    text-transform: uppercase;
+}
+
+.welcomeSection-findLocalStore-contactsBtn{
+    margin-top: 20px;
+    border: none;
+    background:rgba(151, 155, 93, 0.859);
+    padding: 20px;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    border-radius: 17px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.welcomeSection-findLocalStore-contactsBtn::after{
+    content: '\f3c5';
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-left: 10px;
+}
+
+.welcomeSection-findLocalStore-contactsBtn:hover{
+    cursor: pointer;
+    font-size: 18px;
+    padding:17.5px 3.5px;
+    background: rgba(168, 172, 117, 0.859);
+    color: gold;
+}
+
+
+
+/* INFO */
+
+
+.info-wrapper{
+    border-top: 5px solid rgba(168, 172, 117, 0.859);
+}
+
+.info{
+    color: black;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.info-title{
+    color: rgb(85, 74, 11);
+    text-align: center;
+
+    font-size: 22px;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+
+.info-content{
+    color: rgb(85, 74, 11);
+    font-size: 19px;
+    letter-spacing: 1.5px;
+}
+
+
+
+/* BENEFITS */
+
+.benefits-wrapper{
+    border-top: 5px solid rgba(168, 172, 117, 0.859);
+    border-bottom: 5px solid rgba(168, 172, 117, 0.859);
+}
+
+.benefits{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.benefits-item{
+    max-width: 30%;
+    color: rgb(85, 74, 11);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.benefits-item-Link{
+    color: rgb(85, 74, 11);
+    text-decoration: none;
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+.benefits-item-pic{
+    width: 40%;
+    height: 150px;
+    padding: 10px;
+}
+
+
+.benefits-item-title{
+    font-size: 19px;
+    margin-top: 20px;
+}
+
+.benefits-item-content{
+    padding:20px 80px;
+    text-align: center;
+    height: 140px;
+}
+
+.benefits-item-Link:hover{
+    cursor: pointer;
+    border-radius: 15px;
+    border: 5px solid rgba(168, 172, 117, 0.859);
+    padding-bottom: 30px;
+    font-size: 18px;
+}

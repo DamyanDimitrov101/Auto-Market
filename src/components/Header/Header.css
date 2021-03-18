@@ -1,13 +1,17 @@
 .Header{
     background: rgb(23 154 23);
-    box-shadow: 2px 8px 14px 0px grey;
+    box-shadow: 2px 8px 14px 0px rgb(64, 131, 83);
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
+
+    position: relative;
+    z-index: 1;
+    top: 0;
 }
 
 .header-wrapper{
     margin: 0 auto;
-    padding:20px;
+    padding:2px;
     display: flex;
     justify-content: space-between;
 }
@@ -81,6 +85,7 @@
     font-size: 28px;
     font-weight: bold;
     transition:0.5s;
+    font-size: 22px;
 }
 
 .header-nav-links a{
@@ -149,8 +154,10 @@
 }
 
 .header-User:hover{
-    font-size: 20px;
+    font-size: 17px;
     box-shadow: 2px 0px 6px 3px gold;
+
+    padding:10px 16.5px;
 }
 
 .header-User-LogIn a{
