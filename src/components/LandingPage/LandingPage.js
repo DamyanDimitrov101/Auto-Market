@@ -6,7 +6,7 @@ import findBenefitsPic from '../../assets/findBenefits-Pic.png';
 
 function LandingPage() {
     return (
-        <main className="Main">
+        <main className="Main-LandingPage">
             <section className="welcomeSection-wrapper">
 
                 <section className="welcomeSection main-wrapper">
