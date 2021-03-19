@@ -1,14 +1,26 @@
+import { useEffect } from 'react';
 import './SearchMenu.css';
+import {getAll} from '../../../services/Cars-Services';
 
 function SearchMenu() {
+    useEffect( () => {
+        getAll()
+        .then(res=>console.log(res));
+
+    }, []);
+
     return (
         <aside className="SearchMenu">
-            <h2 className="SearchMenu-title">Apply your search criteria</h2>
+            <h2 className="SearchMenu-title">Apply your search criteria:</h2>
 
             <form action="" className="SearchMenu-form">
                 <label htmlFor="make">
                     Make:
-                    <input type="text" className="make" id="make"/>
+                   <select name="make" id="make" default="Make">
+                       <option value="bmw">BMW</option>
+                       <option value="bmw">BMW</option>
+                       <option value="bmw">BMW</option>
+                   </select>
                 </label>
                 <label htmlFor="model">
                     Model:
@@ -19,9 +31,19 @@ function SearchMenu() {
                     <input type="text" className="year" id="year"/>
                 </label>
                 <label htmlFor="transmission">
-                    Year:
-                    <input type="text" className="year" id="year"/>
+                    Transmission:
+                    <input type="text" className="transmission" id="transmission"/>
                 </label>
+                <label htmlFor="fuel">
+                    Fuel:
+                    <input type="text" className="fuel" id="fuel"/>
+                </label>                
+                <label htmlFor="color">
+                    Color:
+                    <input type="text" className="color" id="color"/>
+                </label>
+
+                <input type="submit" className="SearchMenu-form-submitBtn" value="Find"/>
             </form>
         </aside>
     );

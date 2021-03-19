@@ -48,13 +48,13 @@ function Footer() {
                     <h4 className="footer-socials-title">Find us here:</h4>
                     <ul className="footer-socials-list">
                         <li>
-                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i className="fab fa-facebook"></i></a>
                         </li>
                         <li>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i className="fab fa-instagram"></i></a>
                         </li>
                         <li>
-                            <a href="#"><i class="fab fa-twitter-square"></i></a>
+                            <a href="#"><i className="fab fa-twitter-square"></i></a>
                         </li>                    
                     </ul>
                 </article>
