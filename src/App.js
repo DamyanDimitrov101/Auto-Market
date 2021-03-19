@@ -2,6 +2,7 @@ import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import LandingPage from "./components/LandingPage";
 import Cars from "./components/Cars";
+import Contacts from "./components/Contacts";
 import './App.css';
 
 function App() {
@@ -11,7 +12,9 @@ function App() {
 
       {/* <LandingPage /> */}
 
-      <Cars/>
+      {/* <Cars/> */}
+
+      <Contacts />
 
       <Footer className="App-footer" />
     </div>

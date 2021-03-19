@@ -1,0 +1,113 @@
+.Main-Contacts{
+    position: relative;
+    top: -26px;
+    padding-top: 80px;
+    padding-bottom: 50px;
+    background: white;
+}
+
+.Contacts{
+    margin: 0 auto;
+    max-width: 1290px;
+    display: flex;
+    flex-direction: column;
+}
+
+.Contacts-map{
+    margin-bottom: 140px;
+}
+
+.Contacts-map-frame{
+    width: 100%;
+    height: 500px; 
+    position: relative;
+    top: -52px;
+    border-radius: 20px;
+
+    border-bottom: 5px solid rgba(168, 172, 117, 0.859);
+    border-radius: 20px;
+}
+
+.leaflet-touch .leaflet-control-layers, .leaflet-touch .leaflet-bar {
+    border: 2px solid rgba(0,0,0,0.2);
+    background-clip: padding-box;
+    position: relative;
+    top: 35px;
+}
+
+.Contacts-info{
+    color: black;
+}
+
+.Contacts-info-items{
+    display: flex;
+    justify-content: space-between;
+}
+
+.Contacts-info-title{
+    margin: 30px 0px;
+}
+
+.Contacts-info-email-content,
+.Contacts-info-email-content{
+    font-size: 22px;
+    margin-top: 20px;
+}
+
+.Contacts-socials-list{
+    list-style: none;
+    color: black;
+    display: flex;
+    background: rgb(23 154 23);
+    border-radius: 12px;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+
+.Contacts-socials-list li{
+    margin-right: 20px;
+    margin-top: 10px;
+}
+
+.Contacts-socials-list a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.Contacts-socials-list a:hover{
+    color: gold;
+    cursor: pointer;
+}
+
+.Contacts-workingTime-title{
+    margin-bottom: 20px;
+}
+
+.Contacts-locationAndTime{
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.Contacts-location{
+    margin-right: 300px;
+}
+
+.Contacts-location-title{
+    margin-bottom: 20px;
+}
+
+.Contacts-workingTime-MonToFrid,
+.Contacts-workingTime-Weekend{
+    display: flex;
+    margin-bottom: 5px
+}
+
+.Contacts-workingTime-MonToFrid-title{
+    margin-right: 15px;
+}
+
+.Contacts-workingTime-Weekend-title{
+    margin-right: 77px;
+}

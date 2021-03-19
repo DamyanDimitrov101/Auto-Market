@@ -56,6 +56,9 @@ function Footer() {
                         <li>
                             <a href="#"><i className="fab fa-twitter-square"></i></a>
                         </li>                    
+                        <li>
+                            <a href="#"><i className="fab fa-youtube"></i></a>
+                        </li>                    
                     </ul>
                 </article>
             </footer>

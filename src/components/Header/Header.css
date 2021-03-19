@@ -71,11 +71,11 @@
 }
 
 .header-nav-links > a:nth-child(1) > li{
-    border-left: 1px solid white;
+    border-left: 1px solid rgba(168, 172, 117, 0.859);
 }
 
 .header-nav-links li{
-    border-right: 1px solid white;
+    border-right: 1px solid rgba(168, 172, 117, 0.859);
     padding: 30px;
 }
 
