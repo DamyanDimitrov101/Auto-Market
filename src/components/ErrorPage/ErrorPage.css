@@ -30,3 +30,8 @@
     padding: 20px;
     border-radius: 12px;
 }
+
+.ErrorPage a:hover{
+    color: rgba(168, 172, 117, 0.859);
+    background: rgb(255, 222, 37);
+}

@@ -25,17 +25,17 @@ function Header() {
                             </li>
                             </NavLink>
                             
-                            <Link to="/MyOffers">
+                            <NavLink to="/MyOffers" activeClassName="active-header-nav-Link" exact={true}>
                             <li>
                                 My Offers
                             </li>
-                            </Link>
+                            </NavLink>
                             
-                            <Link to="/Ask">
+                            <NavLink to="/Ask" activeClassName="active-header-nav-Link" exact={true}>
                             <li>
                                 Ask
                             </li>
-                            </Link>
+                            </NavLink>
 
                             <NavLink to="/Contacts" activeClassName="active-header-nav-Link" exact={true}>
                             <li>
