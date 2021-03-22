@@ -12,6 +12,11 @@ function Footer() {
 
                         <ul className="footer-nav-list">
                             <li>
+                                <Link to="/">
+                                    Home
+                                </Link>
+                            </li>
+                            <li>
                                 <Link to="/Cars">
                                     Cars
                                 </Link>

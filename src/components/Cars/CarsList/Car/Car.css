@@ -1,0 +1,60 @@
+.CarItem{    
+    border: 2px solid rgb(23 154 23);
+    border-radius: 12px;
+    margin-bottom: 20px;
+    text-decoration: none;
+}
+
+.CarItem a{
+    text-decoration: none;
+    color: black;
+}
+
+.CarItem-Box{
+    border-radius: 10px;
+    display: flex;
+    background: rgba(168, 172, 117, 0.859);
+}
+
+.CarItem-Box:hover{
+    background: gold;
+    
+}
+
+.CarItem-Box-pic-wrapper{
+    width: 250px;
+    height: 200px;
+}
+
+.CarItem-Box-pic{    
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.CarItem-Box-content{
+    background: white;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    margin: 5px 0px;
+    flex-basis: 100%;
+    height: 190px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.CarItem-Box-content:hover{
+    background: rgba(168, 172, 117, 0.859);
+    color: white;
+}
+
+.CarItem-Box-content label{
+    font-size: 18px;
+    width: 50%;
+}
+
+.CarItem-Box-content label:hover{
+    cursor: pointer;
+}

@@ -1,4 +1,4 @@
-.Main-Cars{
+.Main-MyOffers{
     position: relative;
     top: -26px;
     padding-top: 80px;
@@ -6,19 +6,9 @@
     background: white;
 }
 
-.Cars{
+.MyOffers{
     margin: 0 auto;
     max-width: 1290px;
     display: flex;    
     justify-content: space-between;
-}
-
-.Cars-CarsList-suspense-fallback{
-    position: relative;
-    top: -26px;
-    left: -400px;
-    padding-top: 80px;
-    padding-bottom: 50px;
-    color: black;    
-    font-size: 40px;    
 }

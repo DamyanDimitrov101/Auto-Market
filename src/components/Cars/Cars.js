@@ -1,17 +1,17 @@
-import { useState, useEffect } from "react";
+import React, { Suspense, useState, useEffect } from "react";
 import { getAll } from '../../services/Cars-Services';
 import './Cars.css';
 
 import SearchMenu from './SearchMenu';
-import CarsList from './CarsList';
 
 function Cars() {
+    const CarListLazyComponent = React.lazy(() => import('./CarsList'));
     let [cars, setCars] = useState([]);
 
     useEffect(() => {
         getAll()
-            .then(res => {
-                return setCars(res.slice(1));
+            .then(data => {
+                return setCars(data.slice(1));
             });
 
     }, []);
@@ -21,7 +21,9 @@ function Cars() {
             <div className="Cars">
                 <SearchMenu className="Cars-SearchMenu" />
 
-                <CarsList cars={cars} className="Cars-CarsList" />
+                <Suspense fallback={<div className="Cars-CarsList-suspense-fallback">Loading ...</div>}>
+                <CarListLazyComponent cars={cars} className="Cars-CarsList" />
+                </Suspense>
             </div>
         </main>
     );

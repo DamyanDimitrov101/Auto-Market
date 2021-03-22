@@ -4,6 +4,7 @@ import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import LandingPage from "./components/LandingPage";
 import Cars from "./components/Cars";
+import MyOffers from "./components/MyOffers";
 import Contacts from "./components/Contacts";
 import ErrorPage from './components/ErrorPage';
 
@@ -18,6 +19,7 @@ function App() {
       <Switch>
         <Route path="/" component={LandingPage} exact />
         <Route path="/Cars" component={Cars} exact />
+        <Route path="/MyOffers" component={MyOffers} exact />
         <Route path="/Contacts" component={Contacts} exact />
         <Route render={() => ErrorPage()}/>
       </Switch>
