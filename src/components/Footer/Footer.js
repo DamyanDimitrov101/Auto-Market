@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './Footer.css';
 
 function Footer() {
@@ -11,28 +12,28 @@ function Footer() {
 
                         <ul className="footer-nav-list">
                             <li>
-                                <a href="#">
+                                <Link to="/Cars">
                                     Cars
-                            </a>
+                                </Link>
                             </li>
                             <li>
-                                <a href="#">
+                                <Link to="/MyOffers">
                                     My offers
-                            </a>
+                                </Link>
                             </li>
                         </ul>
 
 
                         <ul className="footer-nav-list">
                             <li>
-                                <a href="#">
+                                <Link to="/Ask">
                                     Ask
-                            </a>
+                                </Link>
                             </li>
                             <li>
-                                <a href="#">
+                                <Link to="/Contacts">
                                     Contact us
-                            </a>
+                                </Link>
                             </li>
                         </ul>
                     </article>
@@ -48,17 +49,17 @@ function Footer() {
                     <h4 className="footer-socials-title">Find us here:</h4>
                     <ul className="footer-socials-list">
                         <li>
-                            <a href="#"><i className="fab fa-facebook"></i></a>
+                            <a href="https://www.facebook.com/"><i className="fab fa-facebook"></i></a>
                         </li>
                         <li>
-                            <a href="#"><i className="fab fa-instagram"></i></a>
+                            <a href="https://www.instagram.com/"><i className="fab fa-instagram"></i></a>
                         </li>
                         <li>
-                            <a href="#"><i className="fab fa-twitter-square"></i></a>
-                        </li>                    
+                            <a href="https://twitter.com/?lang=bg"><i className="fab fa-twitter-square"></i></a>
+                        </li>
                         <li>
-                            <a href="#"><i className="fab fa-youtube"></i></a>
-                        </li>                    
+                            <a href="https://www.youtube.com/"><i className="fab fa-youtube"></i></a>
+                        </li>
                     </ul>
                 </article>
             </footer>

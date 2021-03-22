@@ -1,8 +1,10 @@
-import './LandingPage.css';
+import { Link } from "react-router-dom";
 
 import askBenefitPic from '../../assets/askBenefit-Pic.jpg';
 import myCarBenefitPic from '../../assets/myCarBenefit-Pic.png';
 import findBenefitsPic from '../../assets/findBenefits-Pic.png';
+
+import './LandingPage.css';
 
 function LandingPage() {
     return (
@@ -17,16 +19,20 @@ function LandingPage() {
                             Check for our offers!
                         </p>
 
-                        <button className="welcomeSection-CheckForOffers-showBtn">
-                            Show more
+                        <Link to="/Cars">
+                            <button className="welcomeSection-CheckForOffers-showBtn">
+                                Show more
                         </button>
+                        </Link>
                     </article>
 
 
                     <article className="welcomeSection-findLocalStore">
                         <h2 className="welcomeSection-findLocalStore-title">Easy access to our local second hand dealer in Burgas, Bulgaria</h2>
 
-                        <button className="welcomeSection-findLocalStore-contactsBtn">Find our location</button>
+                        <Link to="/Contacts">
+                            <button className="welcomeSection-findLocalStore-contactsBtn">Find our location</button>
+                        </Link>
                     </article>
                 </section>
             </section>
@@ -50,25 +56,25 @@ function LandingPage() {
             <section className="benefits-wrapper">
                 <section className="benefits main-wrapper">
                     <article className="benefits-item">
-                        <a href="#" className="benefits-item-Link">
+                        <Link to="" className="benefits-item-Link">
                             <img src={askBenefitPic} alt="askPic" className="benefits-item-pic" />
                             <h4 className="benefits-item-title">Ask</h4>
                             <p className="benefits-item-content">You can reach us for anything you need to know about the available cars on site.</p>
-                        </a>
+                        </Link>
                     </article>
                     <article className="benefits-item">
-                        <a href="#" className="benefits-item-Link">
+                        <Link to="/Cars" className="benefits-item-Link">
                             <img src={findBenefitsPic} alt="findBenefitsPic" className="benefits-item-pic" />
                             <h4 className="benefits-item-title">Find</h4>
                             <p className="benefits-item-content">Your dream car awaits you, find it now with our help.</p>
-                        </a>
+                        </Link>
                     </article>
                     <article className="benefits-item">
-                        <a href="#" className="benefits-item-Link">
+                        <Link to="" className="benefits-item-Link">
                             <img src={myCarBenefitPic} alt="myCarBenefitPic" className="benefits-item-pic lastBenefit-Pic" />
                             <h4 className="benefits-item-title">Manage</h4>
                             <p className="benefits-item-content">Selling your car has never been easier.</p>
-                        </a>
+                        </Link>
                     </article>
                 </section>
             </section>

@@ -1,0 +1,32 @@
+.Main-ErrorPage{
+    position: relative;
+    top: -26px;
+    padding-top: 80px;
+    padding-bottom: 50px;
+    background: white;
+}
+
+.ErrorPage{
+    margin: 0 auto;
+    max-width: 1290px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.ErrorPage h1{
+    font-size: 40px;
+    color: darkgray;
+    margin-bottom: 40px;
+}
+
+.ErrorPage a{
+    text-decoration: none;
+    font-size: 22px;
+    color: white;
+    font-weight: bold;
+    background: gold;
+    padding: 20px;
+    border-radius: 12px;
+}

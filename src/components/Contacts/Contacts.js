@@ -62,16 +62,16 @@ function Contacts() {
                             <h4 className="Contacts-info-socials-title">Try find us here as well:</h4>
                             <ul className="Contacts-socials-list">
                                 <li>
-                                    <a href="#"><i className="fab fa-facebook"></i> AutoMarket</a>
+                                    <a href="https://www.facebook.com/"><i className="fab fa-facebook"></i> AutoMarket</a>
                                 </li>
                                 <li>
-                                    <a href="#"><i className="fab fa-instagram"></i> AutoMarket</a>
+                                    <a href="https://www.instagram.com/"><i className="fab fa-instagram"></i> AutoMarket</a>
                                 </li>
                                 <li>
-                                    <a href="#"><i className="fab fa-twitter-square"></i> AutoMarket</a>
+                                    <a href="https://twitter.com/?lang=bg"><i className="fab fa-twitter-square"></i> AutoMarket</a>
                                 </li>
                                 <li>
-                                    <a href="#"><i className="fab fa-youtube"></i> AutoMarket</a>
+                                    <a href="https://www.youtube.com/"><i className="fab fa-youtube"></i> AutoMarket</a>
                                 </li>
                             </ul>
                         </article>

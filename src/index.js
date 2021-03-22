@@ -3,14 +3,17 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import firebase from 'firebase';
+import firebase from 'firebase/app';
 import firebaseConfig from './firebaseConfig';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 firebase.initializeApp(firebaseConfig);
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Router>
+      <App />
+    </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );

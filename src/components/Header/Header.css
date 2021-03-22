@@ -70,6 +70,7 @@
 
 }
 
+
 .header-nav-links > a:nth-child(1) > li{
     border-left: 1px solid rgba(168, 172, 117, 0.859);
 }
@@ -99,6 +100,10 @@
     color:#fff;
     text-transform:uppercase;
     transition:0.5s;
+}
+
+.active-header-nav-Link li{
+    color: gold;
 }
 
 
@@ -186,3 +191,4 @@
     content: "\f007";
     margin-left: 10px;
 }
+

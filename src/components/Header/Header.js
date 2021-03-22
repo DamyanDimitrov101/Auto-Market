@@ -1,3 +1,7 @@
+import { Link, NavLink } from "react-router-dom";
+
+import Logo from '../../assets/header-LOGO-PIC.png';
+
 import './Header.css';
 
 function Header() {
@@ -5,43 +9,45 @@ function Header() {
         <header className="Header">
             <div className="header-wrapper">
                     <article className="logoArt">
-                        <a href="#" className="logoArt-href">
-                        <img src='header-LOGO-PIC.png' alt="AppLOGO"/>
+                        
+                        <Link to="/" className="logoArt-href">
+                        <img src={Logo} alt="AppLOGO"/>
                         <p className="logoArt-title">Auto Market</p>
-                        </a>
+                        </Link>
+
                     </article>
 
                     <nav className="header-nav">
                         <ul className="header-nav-links">
-                            <a href="">
+                            <NavLink to="/Cars" activeClassName="active-header-nav-Link" exact={true}>
                             <li>
                                 Cars
                             </li>
-                            </a>
-
-                            <a href="">
+                            </NavLink>
+                            
+                            <Link to="/MyOffers">
                             <li>
                                 My Offers
                             </li>
-                            </a>
-
-                            <a href="">
+                            </Link>
+                            
+                            <Link to="/Ask">
                             <li>
                                 Ask
                             </li>
-                            </a>
+                            </Link>
 
-                            <a href="">
+                            <NavLink to="/Contacts" activeClassName="active-header-nav-Link" exact={true}>
                             <li>
                                 Contact us
                             </li>
-                            </a>
+                            </NavLink>
                         </ul>
                     </nav>
 
                     <article className="header-User">
-                        <span className="header-User-LogIn"><a href="">Log In</a></span>
-                        <span className="header-User-Register"><a href="">Register</a></span>
+                        <span className="header-User-LogIn"><Link to="/LogIn">Log In</Link></span>
+                        <span className="header-User-Register"><Link to="/Register">Register</Link></span>
                     </article>
             </div>
         </header>

@@ -4,8 +4,7 @@ import {getAll} from '../../../services/Cars-Services';
 
 function SearchMenu() {
     useEffect( () => {
-        getAll()
-        .then(res=>console.log(res));
+        getAll();
 
     }, []);
 
