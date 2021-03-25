@@ -11,7 +11,7 @@ function Cars() {
     useEffect(() => {
         getAll()
             .then(data => {
-                return setCars(data.slice(1));
+                return setCars((data[0] != null ? data : data.slice(1)));
             });
 
     }, []);

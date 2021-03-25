@@ -6,9 +6,12 @@ import LandingPage from "./components/LandingPage";
 import Cars from "./components/Cars";
 import MyOffers from "./components/MyOffers";
 import Contacts from "./components/Contacts";
+import CreateNewCar from "./components/MyOffers/ProfileInfo/CreateNewCar";
+import CarInfo from "./components/Cars/CarsList/Car/CarInfo";
 import ErrorPage from './components/ErrorPage';
 
 import './App.css';
+
 
 function App() {
   return (
@@ -21,6 +24,8 @@ function App() {
         <Route path="/Cars" component={Cars} exact />
         <Route path="/MyOffers" component={MyOffers} exact />
         <Route path="/Contacts" component={Contacts} exact />
+        <Route path="/CreateNewCar" component={CreateNewCar} exact />
+        <Route path="/CarInfo/:id" component={CarInfo} exact />
         <Route render={() => ErrorPage()}/>
       </Switch>
 

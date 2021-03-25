@@ -17,7 +17,6 @@ function MyOffers() {
 
         getMine(96)
             .then(data => {
-                console.log(data);
                 return setCars(data);
             });
     }, []);

@@ -4,3 +4,21 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+.back-Btn{
+    background: grey;
+    border: none;
+    font-style: oblique;
+    padding:10px 20px;
+    color: white;
+    font-size: 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.back-Btn:hover{
+    cursor: pointer;
+    color: rgb(23 154 23);;
+    background: lightgrey;
+}

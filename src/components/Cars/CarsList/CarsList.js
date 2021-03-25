@@ -2,7 +2,7 @@ import Car from './Car';
 
 import './CarsList.css';
 
-function CarsList({ cars }) {
+function CarsList({ cars }) {    
   return (
     <div className="CarsList">
       <ul className="CarsList-list">

@@ -43,3 +43,7 @@
     color: gold;
     background: rgb(61 175 61);
 }
+
+.SearchMenu-form input{
+    border: none;
+}

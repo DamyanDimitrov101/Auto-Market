@@ -76,16 +76,13 @@
 }
 
 .header-nav-links li{
-    border-right: 1px solid rgba(168, 172, 117, 0.859);
-    padding: 30px;
-}
-
-.header-nav-links li{
     text-decoration: none;
     color: white;
     font-size: 28px;
     font-weight: bold;
     transition:0.5s;
+    border-right: 1px solid rgba(168, 172, 117, 0.859);
+    padding:10px 35px;
     font-size: 22px;
 }
 
@@ -94,7 +91,7 @@
     display: block;
     position:relative;
     text-decoration:none;
-    padding:5px;
+
     font-size:18px;
     font-family: sans-serif;
     color:#fff;
@@ -114,7 +111,7 @@
 }
   
 .header-nav-links  a li:hover{
-    transform:scale(2);
+    transform:scale(1.5);
     opacity:1;
     filter:blur(0);
     text-decoration:none;

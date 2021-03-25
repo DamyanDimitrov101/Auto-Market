@@ -1,48 +1,83 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import './SearchMenu.css';
-import {getAll} from '../../../services/Cars-Services';
+import { getMakes, getModels } from '../../../services/SearchMenu-Services';
 
 function SearchMenu() {
-    useEffect( () => {
-        getAll();
+    let [makes, setMakes] = useState([]);
+    let [models, setModels] = useState([]);
 
+    useEffect(() => {
+        getMakes()
+            .then(makes => {
+                setMakes(makes);
+            });
+
+        let makeSelected = document.getElementById("make").value;
+        getModels(makeSelected)
+            .then(models => {
+                setModels(models);
+            });
     }, []);
+
+    function handleMakeChange(e) {
+        getModels(e.target.value)
+            .then(models => {
+                setModels(models);
+            });
+    }
+
+    function SearchMenuSubmit(e){
+        e.preventDefault();
+        console.log(e.target);
+    }
 
     return (
         <aside className="SearchMenu">
             <h2 className="SearchMenu-title">Apply your search criteria:</h2>
 
-            <form action="" className="SearchMenu-form">
+            <form action="" className="SearchMenu-form" onSubmit={SearchMenuSubmit}>
                 <label htmlFor="make">
                     Make:
-                   <select name="make" id="make" default="Make">
-                       <option value="bmw">BMW</option>
-                       <option value="bmw">BMW</option>
-                       <option value="bmw">BMW</option>
+                   <select name="make" id="make" default="Make" onChange={handleMakeChange}>
+                        <option value="" selected disabled hidden>Choose here</option>
+                        {makes.map(m => {
+                            return <option key={m} value={m}>{m}</option>
+                        })};n
                    </select>
                 </label>
                 <label htmlFor="model">
                     Model:
-                    <input type="text" className="model" id="model"/>
+                   <select name="model" id="model" default="Model">
+                        {models.map(m => <option key={m} value={m}>{m}</option>)};
+                   </select>
                 </label>
                 <label htmlFor="year">
-                    Year:
-                    <input type="text" className="year" id="year"/>
+                    First registration:
+                    <input id="year" className="year" type="number" min="1900" max="2099" step="1" />
                 </label>
                 <label htmlFor="transmission">
                     Transmission:
-                    <input type="text" className="transmission" id="transmission"/>
+                    <select name="transmission" id="transmission" default="transmission">
+                        <option value="" selected disabled hidden>Choose here</option>
+                        <option value="automatic">automatic</option>
+                        <option value="semi-automatic">semi-automatic</option>
+                        <option value="manual">manual</option>
+                    </select>
                 </label>
                 <label htmlFor="fuel">
                     Fuel:
-                    <input type="text" className="fuel" id="fuel"/>
-                </label>                
+                    <select name="fuel" id="fuel" default="fuel">
+                        <option value="" selected disabled hidden>Choose here</option>
+                        <option value="gasoline">gasoline</option>
+                        <option value="diesel">diesel</option>
+                    </select>
+                </label>
                 <label htmlFor="color">
                     Color:
-                    <input type="text" className="color" id="color"/>
+                    <input type="text" className="color" id="color" />
                 </label>
 
-                <input type="submit" className="SearchMenu-form-submitBtn" value="Find"/>
+                <input type="submit" className="SearchMenu-form-submitBtn" value="Find" />
             </form>
         </aside>
     );

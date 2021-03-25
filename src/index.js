@@ -3,11 +3,9 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import firebase from 'firebase/app';
-import firebaseConfig from './firebaseConfig';
 import { BrowserRouter as Router } from 'react-router-dom';
+import { storage } from "./firebase/firebase";
 
-firebase.initializeApp(firebaseConfig);
 
 ReactDOM.render(
   <React.StrictMode>

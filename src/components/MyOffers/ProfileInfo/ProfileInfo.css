@@ -3,10 +3,33 @@
     border: 2px solid rgb(23 154 23);
     padding: 20px;
     border-radius: 12px;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
 }
 
 .ProfileInfo{
     display: flex;
     flex-direction: column;
     margin-top: 20px;
+}
+
+.CreateNewCar-Link{
+    align-self: flex-end;    
+}
+
+.CreateNewCar-Link button{
+    border: none;
+    padding:10px 20px;
+    background: rgb(23 154 23);
+    color: white;
+    font-size: 15px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.CreateNewCar-Link button:hover{
+    cursor: pointer;
+    color: gold;
+    background: rgba(168, 172, 117, 0.859);
 }

@@ -4,10 +4,10 @@ import './Car.css';
 function Car({ car }) {
     return (
         <li className="CarItem">
-            <Link to="/">
+            <Link to={`/CarInfo/${car.id}`}>
                 <article className="CarItem-Box">
                     <div className="CarItem-Box-pic-wrapper">
-                        <img src={car.picture} alt="No Photos available" className="CarItem-Box-pic" />
+                        <img src={car.picture} alt="No Photo available" className="CarItem-Box-pic" />
                     </div>
                     <div className="CarItem-Box-content">
                         <label htmlFor="make">                            

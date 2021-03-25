@@ -4,5 +4,16 @@
 
 .CarsList-list{
     list-style: none;
+
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    width: 850px;
 }
 
+.CarsList-list:hover .CarItem{
+    filter:blur(3px);
+    opacity:.5;
+    transform: scale(.98);
+    box-shadow:none;
+  }

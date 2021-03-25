@@ -1,0 +1,143 @@
+.CreateNewCar-wrapper{
+    position: relative;
+    top: -26px;
+    padding-top: 80px;
+    padding-bottom: 50px;
+    background: white;
+}
+
+.CreateNewCar{
+    margin: 0 auto;
+    max-width: 1290px;
+    justify-content: space-evenly;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    flex-direction: row;
+}
+
+.CreateNewCar-content{
+    display: flex;
+    flex-direction: column; 
+}
+
+.CreateNewCar button{
+    border: none;
+    padding:10px 20px;
+    background: rgb(23 154 23);
+    color: white;
+    font-size: 15px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.CreateNewCar button:hover{
+    cursor: pointer;
+    color: gold;
+    background: rgba(168, 172, 117, 0.859);
+}
+
+.CreateNewCar-imageUpload{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+
+.CreateNewCar-imageUpload-Image{
+    width: 300px;
+    height: 250px;
+}
+
+.CreateNewCar-imageUpload-progress{
+    font-size: x-large;
+
+}
+
+.CreateNewCar-text{
+    display: flex;
+    flex-direction: column;
+}
+
+.CreateNewCar-content-title{
+    color: rgb(23 154 23);
+    margin-bottom: 30px;
+}
+
+.CreateNewCar-text label{
+    margin: 10px;
+}
+
+.CreateNewCar-text strong{
+    background: rgb(23 154 23);
+    padding: 6px;
+    color: white;
+    border-bottom-left-radius: 8px;
+    border-top-left-radius: 8px;
+}
+
+.CreateNewCar-text-input{
+    border: none;
+    padding: 3px;
+    width: 234px;
+    border-bottom: 3px solid rgb(23 154 23);
+}
+
+.CreateNewCar-text-comment{
+    border-bottom: 3px solid rgb(23 154 23);
+    padding: 3px;    
+    border-bottom-left-radius: 20px;
+}
+
+.CreateNewCar-text-comment strong{
+    position: relative;
+    left: -10px;
+    bottom: -1px;
+}
+
+.CreateNewCar-text-comment textarea{
+    border: none;
+    
+    width: 234px;
+    height: 70px;
+}
+
+.CreateNewCar-button-wrapper{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+
+.CreateNewCar-Submit-Input{
+    align-self: flex-end;
+}
+
+.CreateNewCar-Submit-Input{
+    border: none;
+    padding:10px 20px;
+    background: rgb(23 154 23);
+    color: white;
+    font-size: 15px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.CreateNewCar-Submit-Input:hover{
+    cursor: pointer;
+    color: gold;
+    background: rgba(168, 172, 117, 0.859);
+}
+
+.CreateNewCar-Back-Btn{
+    
+}
+
+.CreateNewCar-Back-Btn:hover{
+    
+}
+
+.CreateNewCar-imageUpload-title{
+    color: rgb(23 154 23);
+    margin-bottom: 30px;
+    font-size: 30px;
+}
