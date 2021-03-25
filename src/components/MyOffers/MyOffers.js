@@ -12,8 +12,7 @@ function MyOffers() {
     let [cars, setCars] = useState([]);
 
     useEffect(() => {
-        getUser()
-            .then(data=> console.log(data));
+        
 
         getMine(96)
             .then(data => {

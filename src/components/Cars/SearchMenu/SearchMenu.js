@@ -38,8 +38,9 @@ function SearchMenu() {
             <form action="" className="SearchMenu-form" onSubmit={SearchMenuSubmit}>
                 <label htmlFor="make">
                     Make:
-                   <select name="make" id="make" default="Make" onChange={handleMakeChange}>
-                        <option value="" selected disabled hidden>Choose here</option>
+                   <select name="make" id="make" defaultValue="DEFAULT" onChange={handleMakeChange}>
+                        <option value="DEFAULT" disabled hidden>Choose here</option>
+                        
                         {makes.map(m => {
                             return <option key={m} value={m}>{m}</option>
                         })};n
@@ -57,8 +58,8 @@ function SearchMenu() {
                 </label>
                 <label htmlFor="transmission">
                     Transmission:
-                    <select name="transmission" id="transmission" default="transmission">
-                        <option value="" selected disabled hidden>Choose here</option>
+                    <select name="transmission" id="transmission" defaultValue="DEFAULT">
+                        <option value="DEFAULT" disabled hidden>Choose here</option>
                         <option value="automatic">automatic</option>
                         <option value="semi-automatic">semi-automatic</option>
                         <option value="manual">manual</option>
@@ -66,8 +67,8 @@ function SearchMenu() {
                 </label>
                 <label htmlFor="fuel">
                     Fuel:
-                    <select name="fuel" id="fuel" default="fuel">
-                        <option value="" selected disabled hidden>Choose here</option>
+                    <select name="fuel" id="fuel" defaultValue="DEFAULT">
+                        <option value="DEFAULT" disabled hidden>Choose here</option>
                         <option value="gasoline">gasoline</option>
                         <option value="diesel">diesel</option>
                     </select>
