@@ -70,6 +70,10 @@
 
 }
 
+#active-header-nav-Link-icon{
+    margin-right: 10px;   
+}
+
 
 .header-nav-links > a:nth-child(1) > li{
     border-left: 1px solid rgba(168, 172, 117, 0.859);

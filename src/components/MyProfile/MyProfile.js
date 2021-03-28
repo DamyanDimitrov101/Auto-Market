@@ -5,9 +5,9 @@ import { getUser } from "../../services/User-Services";
 import CarsList from "../Cars/CarsList";
 import ProfileInfo from "./ProfileInfo";
 
-import './MyOffers.css';
+import './MyProfile.css';
 
-function MyOffers() {
+function MyProfile() {
     let [user, setUser] = useState({});
     let [cars, setCars] = useState([]);
 
@@ -21,8 +21,8 @@ function MyOffers() {
     }, []);
 
     return (
-        <main className="Main-MyOffers">
-            <div className="MyOffers">
+        <main className="Main-MyProfile">
+            <div className="MyProfile">
                 <ProfileInfo />
                 <CarsList cars={cars} className="Cars-CarsList" />
             </div>
@@ -30,4 +30,4 @@ function MyOffers() {
     );
 }
 
-export default MyOffers;
+export default MyProfile;

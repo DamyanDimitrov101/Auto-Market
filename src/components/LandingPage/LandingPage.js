@@ -56,7 +56,7 @@ function LandingPage() {
             <section className="benefits-wrapper">
                 <section className="benefits main-wrapper">
                     <article className="benefits-item">
-                        <Link to="" className="benefits-item-Link">
+                        <Link to="/Ask" className="benefits-item-Link">
                             <img src={askBenefitPic} alt="askPic" className="benefits-item-pic" />
                             <h4 className="benefits-item-title">Ask</h4>
                             <p className="benefits-item-content">You can reach us for anything you need to know about the available cars on site.</p>
@@ -70,7 +70,7 @@ function LandingPage() {
                         </Link>
                     </article>
                     <article className="benefits-item">
-                        <Link to="" className="benefits-item-Link">
+                        <Link to="/MyProfile" className="benefits-item-Link">
                             <img src={myCarBenefitPic} alt="myCarBenefitPic" className="benefits-item-pic lastBenefit-Pic" />
                             <h4 className="benefits-item-title">Manage</h4>
                             <p className="benefits-item-content">Selling your car has never been easier.</p>

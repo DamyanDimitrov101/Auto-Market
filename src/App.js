@@ -4,9 +4,10 @@ import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import LandingPage from "./components/LandingPage";
 import Cars from "./components/Cars";
-import MyOffers from "./components/MyOffers";
+import MyProfile from "./components/MyProfile";
+import Ask from "./components/Ask";
 import Contacts from "./components/Contacts";
-import CreateNewCar from "./components/MyOffers/ProfileInfo/CreateNewCar";
+import CreateNewCar from "./components/MyProfile/ProfileInfo/CreateNewCar";
 import CarInfo from "./components/Cars/CarsList/Car/CarInfo";
 import ErrorPage from './components/ErrorPage';
 
@@ -22,7 +23,8 @@ function App() {
       <Switch>
         <Route path="/" component={LandingPage} exact />
         <Route path="/Cars" component={Cars} exact />
-        <Route path="/MyOffers" component={MyOffers} exact />
+        <Route path="/MyProfile" component={MyProfile} exact />
+        <Route path="/Ask" component={Ask} exact />
         <Route path="/Contacts" component={Contacts} exact />
         <Route path="/CreateNewCar" component={CreateNewCar} exact />
         <Route path="/CarInfo/:id" component={CarInfo} exact />

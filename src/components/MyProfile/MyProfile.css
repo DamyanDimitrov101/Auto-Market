@@ -1,4 +1,4 @@
-.Main-MyOffers{
+.Main-MyProfile{
     position: relative;
     top: -26px;
     padding-top: 80px;
@@ -6,7 +6,7 @@
     background: white;
 }
 
-.MyOffers{
+.MyProfile{
     margin: 0 auto;
     max-width: 1290px;
     display: flex;    

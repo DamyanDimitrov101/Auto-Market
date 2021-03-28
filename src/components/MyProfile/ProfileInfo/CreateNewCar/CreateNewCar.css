@@ -9,7 +9,6 @@
 .CreateNewCar{
     margin: 0 auto;
     max-width: 1290px;
-    justify-content: space-evenly;
     display: flex;
     flex-direction: column;
     margin-top: 20px;
@@ -18,7 +17,8 @@
 
 .CreateNewCar-content{
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
+    width: 43%;
 }
 
 .CreateNewCar button{
@@ -43,9 +43,14 @@
     margin-bottom: 50px;
 }
 
+.CreateNewCar-imageUpload-Image-wrapper{
+    margin-right: 160px;
+    margin-left: 50px;
+}
+
 .CreateNewCar-imageUpload-Image{
-    width: 300px;
-    height: 250px;
+    width: 488px;
+    height: 350px;
 }
 
 .CreateNewCar-imageUpload-progress{
@@ -55,30 +60,38 @@
 
 .CreateNewCar-text{
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
 }
 
+
+
 .CreateNewCar-content-title{
     color: rgb(23 154 23);
-    margin-bottom: 30px;
 }
 
 .CreateNewCar-text label{
     margin: 10px;
+    display: contents;
+
 }
 
 .CreateNewCar-text strong{
     background: rgb(23 154 23);
     padding: 6px;
     color: white;
+    width: 100%;
+    margin-right: 30px;
+    margin-top: 15px;
     border-bottom-left-radius: 8px;
     border-top-left-radius: 8px;
 }
 
 .CreateNewCar-text-input{
     border: none;
-    padding: 3px;
-    width: 234px;
+    padding: 5px;
+    width: 80%;    
+    border-bottom-left-radius: 14px;
     border-bottom: 3px solid rgb(23 154 23);
 }
 
@@ -88,17 +101,21 @@
     border-bottom-left-radius: 20px;
 }
 
+
 .CreateNewCar-text-comment strong{
-    position: relative;
-    left: -10px;
-    bottom: -1px;
+  
 }
 
+
+
 .CreateNewCar-text-comment textarea{
-    border: none;
-    
-    width: 234px;
-    height: 70px;
+    border: 4px dashed rgb(23 154 23);
+    position: relative;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    width: 100%;
+    height: 160px;
+    margin-top: 10px;
 }
 
 .CreateNewCar-button-wrapper{
@@ -138,6 +155,21 @@
 
 .CreateNewCar-imageUpload-title{
     color: rgb(23 154 23);
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     font-size: 30px;
 }
+
+/* VALIDATIONS */
+
+.input-validation{
+    color: red;
+    display: none;
+}
+
+.show{
+    display: block;
+}
+
+/* .commentTitle{
+    margin-top: 17px !important;
+} */
