@@ -1,4 +1,4 @@
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import { useEffect, useState } from 'react';
 import { getOne } from '../../../../../services/Cars-Services';
 import './CarInfo.css';
@@ -8,7 +8,6 @@ function CarInfo({
     match
 }) {
     let [car, setCar] = useState({});
-
 
     const history = useHistory();
 
@@ -22,10 +21,18 @@ function CarInfo({
         // TODO: userDisabled
     }, []);
 
+
+
+
+    function onSubmitEdit() {
+        alert('Are you sure?');
+    };
+
+
     return (
         <main className="Main-CarInfo">
             <div className="CarInfo-wrapper">
-            <button className="CarInfo-wrapper-backBtn back-Btn" onClick={() => history.goBack()}>Go back</button>
+                <button className="CarInfo-wrapper-backBtn back-Btn" onClick={() => history.goBack()}>Go back</button>
                 <div className="CarInfo">
                     <section className="CarInfo-details">
                         <article className="CarInfo-details-imageWrapper">
@@ -63,10 +70,18 @@ function CarInfo({
                             </label>
                         </form>
                     </section>
+
                 </div>
+                <section className="CarInfo-modify remodal-bg">
+                    <input type="submit" onClick={onSubmitEdit} className="CarInfo-modify-Btn button yellow" value="Edit" />
+                    <input type="submit" className="CarInfo-modify-Btn button red" value="Delete" />
+
+                </section>
             </div>
         </main>
     );
 }
 
 export default CarInfo;
+
+

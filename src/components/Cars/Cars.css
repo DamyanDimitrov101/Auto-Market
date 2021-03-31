@@ -19,6 +19,9 @@
     left: -400px;
     padding-top: 80px;
     padding-bottom: 50px;
-    color: black;    
-    font-size: 40px;    
+    color: white;    
+    background: rgb(23 154 23);
+    font-size: 30px;    
+    border-radius: 50px;
 }
+

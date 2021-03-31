@@ -11,9 +11,87 @@
     width: 850px;
 }
 
+.CarsList-list-header{
+    border-bottom: 1px solid rgb(23 154 23);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.backBtnWrapper{
+    width: max-content;
+
+}
+
+.sort{
+    justify-self: flex-end;
+    height: -webkit-fill-available;
+    align-self: flex-end;
+    padding-bottom: 20px;
+    cursor: pointer;
+    color: #000;
+}
+
+.sort-Asc{
+    color:rgb(23 154 23);
+}
+
+.sort-Desc{
+    color:rgb(23 154 23);
+}
+
+
 .CarsList-list:hover .CarItem{
     filter:blur(3px);
     opacity:.5;
     transform: scale(.98);
     box-shadow:none;
-  }
+}
+
+.Cars-NoCarsMessage{
+    position: relative;
+    text-align: center;
+    top: 20px;
+
+    transition-property: width;
+    transition-duration: 5s;
+    transition-delay: 2s;
+}
+
+.Cars-NoCarsMessage-text{
+    position: relative;
+    top: 30px;
+}
+
+.fade-in {
+    animation: fadeIn ease 12s;
+    -webkit-animation: fadeIn ease 12s;
+    -moz-animation: fadeIn ease 12s;
+    -o-animation: fadeIn ease 12s;
+    -ms-animation: fadeIn ease 12s;
+}
+
+    @keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+    }
+    
+    @-moz-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+    }
+    
+    @-webkit-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+    }
+    
+    @-o-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+    }
+    
+    @-ms-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+    }

@@ -16,9 +16,10 @@
     flex-direction: column;
     border-bottom: 2px solid rgb(23 154 23);
     margin-bottom: 20px;
+    font-weight: bold;
 }
 
-.SearchMenu-form label:nth-child(6){
+.SearchMenu-form label:nth-child(8){
     margin-bottom: 40px;
 }
 
@@ -26,24 +27,11 @@
     border: none;
 }
 
-.SearchMenu-form-submitBtn{
-    border: none;
-    background: rgb(23 154 23);
-    border-radius: 12px;
-    width: fit-content;
-    padding:5px 20px;
-    color: white;
-    font-weight: bold;
-    align-self: center;
-    font-size: 18px;
-}
-
-.SearchMenu-form-submitBtn:hover{
-    cursor: pointer;
-    color: gold;
-    background: rgb(61 175 61);
-}
 
 .SearchMenu-form input{
     border: none;
+}
+
+.price{
+    padding: 3px;
 }

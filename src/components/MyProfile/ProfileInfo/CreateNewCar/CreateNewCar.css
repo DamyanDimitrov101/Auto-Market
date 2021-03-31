@@ -90,7 +90,9 @@
 .CreateNewCar-text-input{
     border: none;
     padding: 5px;
-    width: 80%;    
+    padding-left: 15px;
+    width: 100%;
+    box-shadow: inset 3px 0px 1px 0px;
     border-bottom-left-radius: 14px;
     border-bottom: 3px solid rgb(23 154 23);
 }

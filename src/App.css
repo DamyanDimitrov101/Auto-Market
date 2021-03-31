@@ -22,3 +22,50 @@
     color: rgb(23 154 23);;
     background: lightgrey;
 }
+
+.submitBtn{
+    border: none;
+    background: rgb(23 154 23);
+    border-radius: 12px;
+    width: fit-content;
+    padding:5px 20px;
+    color: white;
+    font-weight: bold;
+    align-self: center;
+    font-size: 18px;
+}
+
+.submitBtn:hover{
+    cursor: pointer;
+    color: gold;
+    background: rgb(61 175 61);
+}
+
+.checkBox{
+    color: gold;
+    width: 18px;
+    height: 28px;
+    margin-left: 10px;
+    position: relative;
+    top: 7px;
+    background: rgb(61 175 61);;
+}
+
+.editBtn{
+    background: gold;
+    color: white;
+    padding: 10px;
+    width: 49%;
+    font-size: 40px;
+
+}
+
+.deleteBtn{
+    background: red;
+    color: white;
+    padding: 10px;
+    width: 46%;
+    margin-right: 60px;
+    font-size: 40px;
+}
+

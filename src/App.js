@@ -22,6 +22,7 @@ function App() {
 
       <Switch>
         <Route path="/" component={LandingPage} exact />
+    
         <Route path="/Cars" component={Cars} exact />
         <Route path="/MyProfile" component={MyProfile} exact />
         <Route path="/Ask" component={Ask} exact />
