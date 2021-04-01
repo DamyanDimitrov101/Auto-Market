@@ -10,6 +10,7 @@ import Contacts from "./components/Contacts";
 import CreateNewCar from "./components/MyProfile/ProfileInfo/CreateNewCar";
 import CarInfo from "./components/Cars/CarsList/Car/CarInfo";
 import ErrorPage from './components/ErrorPage';
+import Notifications from './components/Notifications';
 
 import './App.css';
 
@@ -19,6 +20,7 @@ function App() {
     <div className="App">
       <Header className="App-header" />
 
+      <Notifications type="warning" message={'Be happy!'}/>
 
       <Switch>
         <Route path="/" component={LandingPage} exact />

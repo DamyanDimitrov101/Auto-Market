@@ -26,6 +26,7 @@ class Ask extends Component {
                         <button className="CarInfo-wrapper-backBtn back-Btn" onClick={this.goBack}>Go back</button>
                     </article>
 
+                    <section className={styles.AskBg}>
                     <article className={styles.askFormWrapper}>
                         <h1 className={styles.askFormTitle}>Don’t hesitate to let us know if you have any questions or comments!</h1>
                         <p className={styles.askFormSubTitle}>We will reach you by the email provided in the next couple of hours..</p>
@@ -53,7 +54,8 @@ class Ask extends Component {
                         </form>
                     </article>
                 </section>
-            </div>
+            </section>
+         </div>
         )
     };
 }
