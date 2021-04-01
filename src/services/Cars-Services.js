@@ -106,3 +106,20 @@ export const sortByPriceDescendingForMyProfile = (userId) => {
       )
       .catch(err => console.log(err));
 }
+
+
+export const deleteCar = async (id) => {
+
+   let res = await request(`${api.car+`${id}.json`}`, 'DELETE', {})
+      .catch(err=> console.log(err));
+
+   return res;
+}
+
+export const editCar = async (id,car, carUpdated) => {
+   console.log(id);
+   let res = await request(`${api.car+`${id}.json`}`, 'PATCH', {...car,...carUpdated})
+      .catch(err=> console.log(err));
+
+   return res;
+}

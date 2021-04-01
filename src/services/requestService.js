@@ -5,7 +5,7 @@ export const request = async (url, method, body) => {
 
     if (body) {
         Object.assign(options, {
-            headers: { 'content-type': 'application/json' },
+            headers: { 'content-type': 'application/json' },            
             body: JSON.stringify(body)
         })
     }

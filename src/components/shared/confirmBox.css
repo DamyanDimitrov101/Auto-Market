@@ -1,0 +1,82 @@
+.container-ConfirmBox {
+  flex-direction: column;
+  position: fixed;
+  background-color: rgb(23 154 23);
+  border-radius: 12px;
+  width: 330px;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -75%);
+  padding: 1rem;
+  z-index: 5; /* Higher than the z-index of the background */
+}
+
+.confirmation-text {
+  display: flex;
+  color: white;
+  margin: 0.5rem 0 2rem;
+  text-align: center;
+  line-height: 2rem;
+  font-size: 1.1rem;
+}
+
+.button-container-ConfirmBox {
+  display: flex;
+  margin-top: auto;
+  justify-content: space-between;
+}
+
+.confirmation-button{
+  display: inline-flex;
+  background-color: #cc0000;
+  color: white;
+  padding: 0.7rem 1.4rem;
+  border: none;
+  border-radius: 0.3rem;
+  font-size: 1rem;
+}
+
+.edit-button {
+    background: gold;
+    width: 83px;
+    font-weight: bold;
+    color: gray;
+}
+
+.delete-button {
+}
+
+.cancel-button {
+  background-color: #999999;
+}
+
+.edit-button:hover {
+    background-color: goldenrod;
+}
+
+.delete-button:hover {
+    background-color: rgb(175, 0, 0);
+}
+
+.confirmation-button:hover {
+    cursor: pointer;
+    color: white;
+}
+  
+.cancel-button:hover {
+    background-color: #b2b2b2;
+    cursor: pointer;
+}
+
+.confirm-bg {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #202020;
+    opacity: 0.55;
+    overflow: hidden; /* disable scrolling*/
+    z-index: 2; /* higher than all other items, but lower than 
+      the confirm box*/
+}

@@ -29,11 +29,19 @@
 .CarInfo-details-imageWrapper{
     width: 800px;
     height: 550px;
+    padding-left: 32px;
 }
 
 .CarInfo-details-imageWrapper img{
     width: 100%;
     height: 100%;
+}
+
+.CarInfo-details-content-wrapper{
+  flex-basis: 50%;
+  padding-left: 40px;
+  display: flex;
+  flex-direction: column;
 }
 
 .CarInfo-details-content{
@@ -43,8 +51,11 @@
 }
 
 .CarInfo-details-content-label{
-    padding: 20px;
-    
+    padding: 20px;    
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    font-weight: bold;
 }
 
 .CarInfo-details-content-text{
@@ -52,6 +63,11 @@
     border: none;
     border-bottom: 2px solid rgb(23 154 23);
     padding: 3px;
+    margin-left: 10px;
+}
+
+.CarInfo-textArea{
+  height: 105px;
 }
 
 .CarInfo-wrapper-backBtn{
@@ -62,6 +78,7 @@
 /* BUTTONS */
     .CarInfo-modify{
         padding-left: 16px; 
+        width: 93%;
     }
 
   .button {
@@ -75,10 +92,34 @@
   }
   
   .yellow{
-    background: rgba(223, 189, 0, 0.836);  
+    color: gold;
+    background: white;
+    font-weight: bold;
+    border: 3px solid rgb(23 154 23);
+  }
+  
+  .red { 
+    background: #fff;  
+    color: red;
+    font-weight: bold;
+    border: 3px solid rgb(23 154 23);
   }
   
   /* Hover state animation applied here */
+
+  .yellow:hover{
+    background: gold;
+    color: white;
+    font-weight: bolder;
+  }
+
+  .red:hover{
+    background: red;
+    color: white;
+    font-weight: bolder;
+  }
+
+
   .button:hover { 
     -webkit-animation: hover 1200ms linear 2 alternate;
     animation: hover 1200ms linear 2 alternate;
@@ -91,7 +132,7 @@
     animation: active 1200ms ease 1 alternate; 
     background: #19af46;
   }
-  .red { background: #ce2424d8; }
+  
   .gray:active { background: #1fa330; }
   
   /* Active state animation keyframes below */
