@@ -19,4 +19,4 @@ In the project directory, you can run:
 
 ### `npm run eject`
 
-### `npm run deploy` - build plus firebase deploy
+### `npm run deploy`
