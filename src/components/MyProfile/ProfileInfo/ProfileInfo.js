@@ -1,7 +1,13 @@
 import { Link } from 'react-router-dom'
 import './ProfileInfo.css';
 
-function ProfileInfo(profilData) {
+function ProfileInfo({profilData, showNotification}) {
+    const newTo = { 
+        pathname: "./CreateNewCar", 
+        showNotification: showNotification 
+    };
+    
+
     return (
         <aside className="ProfileInfo-wrapper">
             <div className="ProfileInfo">
@@ -19,9 +25,12 @@ function ProfileInfo(profilData) {
                 </label>
             </div>
 
-            <Link to="./CreateNewCar" className="CreateNewCar-Link">
+            <div className="createNewCar">
+
+            <Link to={newTo} className="CreateNewCar-Link">
                 <button>Create New Offer</button>
             </Link>
+            </div>
         </aside>
     );
 }

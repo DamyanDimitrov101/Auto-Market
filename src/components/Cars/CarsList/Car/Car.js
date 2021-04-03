@@ -25,10 +25,6 @@ function Car({ car }) {
                         <p id="fuel" className="CarItem-Box-content-fuel">{car.fuel}</p>
                         </label>
 
-                        <label htmlFor="color">
-                        <strong>Color:</strong> 
-                        <p id="color" className="CarItem-Box-content-color">{car.color}</p>
-                        </label>
 
                         <label htmlFor="transmission">
                         <strong>Transmission:</strong>                             
@@ -38,6 +34,12 @@ function Car({ car }) {
                         <label htmlFor="year">
                         <strong>Year:</strong>                             
                         <p id="year" className="CarItem-Box-content-year">{car.year}</p>
+                        </label>
+
+                        
+                        <label htmlFor="price">
+                        <strong>Price:</strong> 
+                        <p id="price" className="CarItem-Box-content-color">{car.price}</p>
                         </label>
                     </div>
                 </article>

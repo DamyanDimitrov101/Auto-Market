@@ -52,7 +52,6 @@ function CarInfo({
         };
         editCar(car.id, car, updatedCar)
             .then(res => {
-                console.log('Success - Edit');
                 history.push('/Cars');
             })
 
@@ -63,7 +62,6 @@ function CarInfo({
 
         deleteCar(car.id)
             .then(res => {
-                console.log('SUCCESS');
                 history.push('/Cars');
             });
 

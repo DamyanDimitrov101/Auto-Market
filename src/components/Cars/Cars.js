@@ -5,26 +5,18 @@ import './Cars.css';
 import { getFilteredCars } from '../../services/SearchMenu-Services.js';
 import SearchMenu from './SearchMenu';
 import { getAll, sortByPriceAscending, sortByPriceDescending } from '../../services/Cars-Services';
+import { useFetch } from "../../customHooks/useFetch-Hook.js";
+
+import api from '../../services/api';
 
 
 function Cars() {
     const CarListLazyComponent = React.lazy(() => import('./CarsList'));
     let [model, setModel] = useState("");
-    let [cars, setCars] = useState([]);
     let [greenAsc, setGreenAsc] = useState(false);
     let [greenDesc, setGreenDesc] = useState(false);
 
-
-    useEffect(() => {
-        let mounted = true;
-        getAll()
-            .then(data => {
-                if (mounted) {
-                    setCars((data[0] != null ? data : data.slice(1)));
-                    mounted = false;
-                }
-            });
-    }, []);
+    let [cars, setCars, isCarsLoading] = useFetch('https://auto-market-a25e4-default-rtdb.firebaseio.com/Cars.json', []);
 
 
     function MenuSearchSubmit(e) {
@@ -46,33 +38,33 @@ function Cars() {
             fuelFind,
             colorFind)
             .then(res => {
-                setCars(res);
+                    setCars(res);
             });
     }
 
-    function sortByPriceAsc(e){
+    function sortByPriceAsc(e) {
         setGreenAsc(true);
         setGreenDesc(false);
 
         sortByPriceAscending()
-            .then(res=>{
-                setCars(res);
+            .then(res => {
+                  setCars(res);
             });
-        
+
     }
-    
-    function sortByPriceDesc(e){
+
+    function sortByPriceDesc(e) {
         setGreenAsc(false);
         setGreenDesc(true);
 
         sortByPriceDescending()
-            .then(res=>{
-                setCars(res);
+            .then(res => {
+                       setCars(res);
             });
-        
+
     }
-    
-    
+
+
     return (
         <main className="Main-Cars">
             <div className="Cars">
@@ -83,15 +75,22 @@ function Cars() {
                     fallback={<div className="Cars-CarsList-suspense-fallback"><h1>Loading ...</h1></div>}
                 >
 
-                    <CarListLazyComponent 
-                        cars={cars} 
-                        setCars={setCars} 
-                        greenAsc={greenAsc} 
-                        greenDesc={greenDesc} 
-                        sortByPriceDesc={sortByPriceDesc} 
-                        sortByPriceAsc={sortByPriceAsc} 
-                        className="Cars-CarsList" 
-                    />
+                    {isCarsLoading?
+                        <div className="Cars-Loading spinner">
+                              <div className = "head"></div>
+                        </div>
+                        :
+
+                        <CarListLazyComponent
+                            cars={cars}
+                            //              setCars={setCars} 
+                            greenAsc={greenAsc}
+                            greenDesc={greenDesc}
+                            sortByPriceDesc={sortByPriceDesc}
+                            sortByPriceAsc={sortByPriceAsc}
+                            className="Cars-CarsList"
+                        />
+                    }
                 </Suspense>
             </div>
         </main>

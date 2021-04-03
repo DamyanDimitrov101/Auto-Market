@@ -20,7 +20,8 @@ function App() {
     <div className="App">
       <Header className="App-header" />
 
-      <Notifications type="warning" message={'Be happy!'}/>
+      {/* <Notifications type="danger" state={'closed'} message={'Be sad!'}/>
+      <Notifications type="succes" state={'closed'} message={'Be happy!'}/> */}
 
       <Switch>
         <Route path="/" component={LandingPage} exact />

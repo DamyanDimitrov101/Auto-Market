@@ -26,7 +26,6 @@
     }
   .notification{
     border-radius:1em;
-    padding:10px;
     margin:4px;
     text-align:center;
     font-family: "Helvetica";
@@ -35,15 +34,40 @@
     height:40px;
     overflow:hidden;
     background: yellow;
+    padding: 20px;
+    width: 300px;
+    position: relative;
+  }
+
+  .notification p{
+    position: absolute;
+    top: 13px;
+  }
+  
+  .success{
+    background: rgb(23 154 23);
+    color: white;
+    
+  }
+
+  .danger{
+    background: red;
+    color: white;
+    
   }
 
   .close-btn{
     position:absolute;
-    top:5px;
-    right:10px;
-    border-radius:50%;
-    font-size:8pt;
+    top:2px;
+    right: 2px;
+    font-size:12pt;
+    padding: 5px;
     text-align:center;
+  }
+
+  .close-btn:hover{
+    cursor: pointer;
+    font-size: 14px;
   }
  
   .opened{
@@ -100,6 +124,7 @@
     
     100%{
       opacity:1;
+      display:block;
       height:40px;
     }
   }  

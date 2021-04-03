@@ -4,14 +4,15 @@
     padding: 20px;
     border-radius: 12px;
     display: flex;
+    flex-direction: column;
     align-content: center;
-    justify-content: space-between;
 }
 
 .ProfileInfo{
     display: flex;
     flex-direction: column;
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .CreateNewCar-Link{

@@ -18,11 +18,7 @@ class CarsList extends Component {
 
 
   componentDidMount() {
-    if (this.props.cars.length > 0) {
-      this.loader = false;
-    }else{
-      this.loader = true;     
-    }
+    
   }
 
   goBack() {

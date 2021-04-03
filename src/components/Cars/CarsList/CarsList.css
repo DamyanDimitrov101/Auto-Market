@@ -54,8 +54,8 @@
     top: 20px;
 
     transition-property: width;
-    transition-duration: 5s;
-    transition-delay: 2s;
+    transition-duration: .5s;
+    transition-delay: 1s;
 }
 
 .Cars-NoCarsMessage-text{
@@ -64,11 +64,11 @@
 }
 
 .fade-in {
-    animation: fadeIn ease 12s;
-    -webkit-animation: fadeIn ease 12s;
-    -moz-animation: fadeIn ease 12s;
-    -o-animation: fadeIn ease 12s;
-    -ms-animation: fadeIn ease 12s;
+    animation: fadeIn ease 8s;
+    -webkit-animation: fadeIn ease 8s;
+    -moz-animation: fadeIn ease 8s;
+    -o-animation: fadeIn ease 8s;
+    -ms-animation: fadeIn ease 8s;
 }
 
     @keyframes fadeIn {
