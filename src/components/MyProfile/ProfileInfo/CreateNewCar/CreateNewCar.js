@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { Link, useHistory } from "react-router-dom";
-import { storage } from "../../../../firebase/firebase";
+import { Link } from "react-router-dom";
+import { storage } from "../../../../utils/firebase";
 
 //import { getUser } from "../../../services/User-Services";
 import { createNewCar } from "../../../../services/Cars-Services";
@@ -24,7 +24,6 @@ function CreateNewCar({location, history}) {
 
     let [makeError, setMakeError] = useState(false);
     let [modelError, setModelError] = useState(false);
-    let [urlError, setUrlError] = useState(false);
     let [priceError, setPriceError] = useState(false);
     let [yearError, setYearError] = useState(false);
     let [colorError, setColorError] = useState(false);

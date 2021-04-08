@@ -2,6 +2,8 @@ import { Route, Switch } from 'react-router-dom';
 
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
+import LoginPage from "./components/Authentication/LoginPage";
+import RegisterPage from "./components/Authentication/RegisterPage";
 import LandingPage from "./components/LandingPage";
 import Cars from "./components/Cars";
 import MyProfile from "./components/MyProfile";
@@ -25,7 +27,9 @@ function App() {
 
       <Switch>
         <Route path="/" component={LandingPage} exact />
-    
+      
+        <Route path="/Login" component={LoginPage} exact />        
+        <Route path="/Register" component={RegisterPage} exact />        
         <Route path="/Cars" component={Cars} exact />
         <Route path="/MyProfile" component={MyProfile} exact />
         <Route path="/Ask" component={Ask} exact />

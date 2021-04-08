@@ -4,7 +4,7 @@ import './Cars.css';
 
 import { getFilteredCars } from '../../services/SearchMenu-Services.js';
 import SearchMenu from './SearchMenu';
-import { getAll, sortByPriceAscending, sortByPriceDescending } from '../../services/Cars-Services';
+import { sortByPriceAscending, sortByPriceDescending } from '../../services/Cars-Services';
 import { useFetch } from "../../customHooks/useFetch-Hook.js";
 
 import api from '../../services/api';
@@ -16,7 +16,7 @@ function Cars() {
     let [greenAsc, setGreenAsc] = useState(false);
     let [greenDesc, setGreenDesc] = useState(false);
 
-    let [cars, setCars, isCarsLoading] = useFetch('https://auto-market-a25e4-default-rtdb.firebaseio.com/Cars.json', []);
+    let [cars, setCars, isCarsLoading] = useFetch(api.cars, []);
 
 
     function MenuSearchSubmit(e) {

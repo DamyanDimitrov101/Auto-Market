@@ -22,7 +22,7 @@ function MyProfile() {
     let [greenDesc, setGreenDesc] = useState(true);
 
     useEffect(() => {
-
+        
 
         getMine(96)
             .then(data => {
@@ -58,10 +58,10 @@ function MyProfile() {
 
     return (
         <>
-            <Notification type={typeNotification} state={stateNotification} message={messageNotification} />
-            <main className="Main-MyProfile">
+            {/* <Notification type={typeNotification} state={stateNotification} message={messageNotification} />*/}
+            <main className="Main-MyProfile"> 
                 <div className="MyProfile">
-                    <ProfileInfo profilData={user} showNotification={showSuccesNotification}/>
+                    <ProfileInfo profilData={user} />
                     <CarsList cars={cars}
                         greenAsc={greenAsc}
                         greenDesc={greenDesc}
