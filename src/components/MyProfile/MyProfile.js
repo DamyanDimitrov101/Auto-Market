@@ -1,16 +1,18 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState , useContext } from "react";
 import { getMine, sortByPriceDescendingForMyProfile, sortByPriceAscendingForMyProfile } from "../../services/Cars-Services";
-import { getUser } from "../../services/User-Services";
 
 
 import CarsList from "../Cars/CarsList";
 import ProfileInfo from "./ProfileInfo";
 import Notification  from "../Notifications/Notification";
+import userContext from "../../contexts/userContext";
 
 import './MyProfile.css';
+import { Link } from "react-router-dom";
 
 function MyProfile() {
-    let [user, setUser] = useState({});
+
+    let [user, setUser] = useContext(userContext);    
     let [cars, setCars] = useState([]);
 
     let [stateNotification, setStateNotification] = useState('closed');
@@ -22,13 +24,12 @@ function MyProfile() {
     let [greenDesc, setGreenDesc] = useState(true);
 
     useEffect(() => {
-        
-
-        getMine(96)
+        getMine(user.uid)
             .then(data => {
+                console.log(data);
                 return setCars(data);
             });
-    }, []);
+    }, [user.uid]);
 
     function sortByPriceAsc() {
         setGreenAsc(!greenAsc);
@@ -58,7 +59,8 @@ function MyProfile() {
 
     return (
         <>
-            {/* <Notification type={typeNotification} state={stateNotification} message={messageNotification} />*/}
+            {user.uid!==101?
+            // <Notification type={typeNotification} state={stateNotification} message={messageNotification} />*/}
             <main className="Main-MyProfile"> 
                 <div className="MyProfile">
                     <ProfileInfo profilData={user} />
@@ -70,6 +72,11 @@ function MyProfile() {
                         className="Cars-CarsList" />
                 </div>
             </main>
+            :
+            <div className="logInFirst">
+                    <h1 className="logInFirst-title">Please <Link to="./Login" className="logInFirst-title-logIn">log in</Link> first <span>or</span> <Link to="./Register" className="logInFirst-title-register">create</Link> your account</h1>
+            </div>    
+        }
         </>
     );
 }

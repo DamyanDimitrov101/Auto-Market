@@ -1,4 +1,5 @@
-.Main-MyProfile{
+.Main-MyProfile,
+.logInFirst{
     position: relative;
     top: -26px;
     padding-top: 80px;
@@ -11,4 +12,31 @@
     max-width: 1290px;
     display: flex;    
     justify-content: space-between;
+}
+
+.logInFirst-title{
+    color: rgb(23 154 23);
+    text-align: center;
+}
+
+.logInFirst-title span{
+    font-weight: bolder;
+    font-size: 55px;
+}
+
+.logInFirst-title-register{
+    color: gold;
+    font-family: 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration: none;
+}
+
+.logInFirst-title-logIn{
+    text-decoration: none;
+    font-family: 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: slategray;
+}
+
+.logInFirst-title-logIn:hover,
+.logInFirst-title-register:hover{
+    font-weight: normal;
 }

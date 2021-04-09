@@ -1,23 +1,24 @@
 import { Link } from 'react-router-dom'
 import './ProfileInfo.css';
 
-function ProfileInfo({profilData, showNotification}) {
+function ProfileInfo({profilData}) {
     const newTo = { 
         pathname: "./CreateNewCar", 
-        showNotification: showNotification 
     };
     
-
     return (
         <aside className="ProfileInfo-wrapper">
             <div className="ProfileInfo">
                 <label htmlFor="photo">
-                    Photo:
-                    <p>{profilData.photo}</p>
+                    <img className="ProfileInfo-photo-img" src={profilData.url}></img>
                 </label>
                 <label htmlFor="name">
                     Name:
                     <p>{profilData.name}</p>
+                </label>
+                <label htmlFor="phone">
+                    Phone:
+                    <p>{profilData.phone}</p>
                 </label>
                 <label htmlFor="email">
                     Email:

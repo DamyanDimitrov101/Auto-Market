@@ -1,9 +1,16 @@
 import firebase from "firebase";
-import { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
+
+import userContext from "../../../contexts/userContext";
+
+import { getPhone } from "../../../services/phone-Services";
+import { getUrl } from "../../../services/User-Services";
+
 import './LoginPage.css';
 
-function LoginPage({history}) {
+function LoginPage({ history }) {
+    let [user, setUser] = useContext(userContext);
     const [errorsList, setErrorsList] = useState([]);
 
     const signInFormHandler = (e) => {
@@ -22,13 +29,25 @@ function LoginPage({history}) {
         }
 
 
-        firebase.auth().signInWithEmailAndPassword(email, password)
+        firebase.auth()
+            .signInWithEmailAndPassword(email, password)
             .then((userCredential) => {
                 // Signed in 
-                var user = userCredential.user;
-                console.log(user.uid);
+                var userCurrent = userCredential.user;
 
-                
+                getPhone(userCurrent.uid)
+                    .then(resUser => {
+                        getUrl(userCurrent.uid)
+                            .then(url=>{
+                                setUser({
+                                    email: userCurrent.email,
+                                    name: resUser.name,
+                                    uid: userCurrent.uid,
+                                    phone: resUser.phone,
+                                    url: url
+                                });
+                            });
+                    });
 
                 history.push('/MyProfile');
             })

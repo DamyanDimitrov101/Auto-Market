@@ -131,6 +131,7 @@ $google-icon: ''; */
     background: linear-gradient(135deg, rgba(37, 147, 92, 0.719) 0%,rgb(23 154 23) 70%);
     color: white;
     outline: none;
+    margin-top: 12px;
     border-radius: 15px;
     border-style: none;
     transition: .3s ease-in-out;

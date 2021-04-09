@@ -3,10 +3,21 @@ import { request } from "./requestService";
 
 export const createNewPhone = async (   
       uid,
-      phone
+      phone,
+      name
    ) => {
 
-   let res = await request(`${api.phones}`, 'POST', { uid, phone});
+   let res = await request(`${api.phones}`, 'POST', { uid, phone, name});
+
+   return res;
+}
+
+export const getPhone = async (   
+      uid
+   ) => {
+      
+      let res = await request(`${api.phone+uid+'.json'}`, 'Get');
+      
 
    return res;
 }

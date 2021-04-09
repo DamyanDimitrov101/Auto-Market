@@ -1,5 +1,5 @@
 .register{
-    height: 460px;    
+    height:  510px;
     background: linear-gradient(90deg, rgba(23,154,23,0.6931547619047619) 0%,  rgba(255,255,255,0) 100%),url('/src/assets/loginBgPic.png');
     background-size: cover;
     background-position: center;
@@ -12,11 +12,7 @@
 .loginSuggest{
     width: fit-content;
     margin: 0 auto;
-}
-
-.loginSuggest{
-    width: fit-content;
-    margin: 0 auto;
+    margin-bottom: 20px;
 }
 
 .loginSuggest a{
@@ -73,3 +69,6 @@
     text-shadow: -3px 2px 4px black;
 }
 
+.auth-container-img-imageUpload-progress{
+    width: 100%;
+}

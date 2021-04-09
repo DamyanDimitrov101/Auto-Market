@@ -34,3 +34,8 @@
     color: gold;
     background: rgba(168, 172, 117, 0.859);
 }
+
+.ProfileInfo-photo-img{
+    width: 200px;
+    height: 200px;
+}

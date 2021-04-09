@@ -1,10 +1,18 @@
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 
 import Logo from '../../assets/header-LOGO-PIC.png';
+import userContext from "../../contexts/userContext";
+
+
 
 import './Header.css';
 
 function Header() {
+    let [user, setUser] = useContext(userContext);
+
+
+
     return (
         <header className="Header">
             <div className="header-wrapper">
@@ -25,12 +33,16 @@ function Header() {
                             </li>
                         </NavLink>
 
-                        <NavLink to="/MyProfile" activeClassName="active-header-nav-Link" exact={true}>
-                            <li>
-                            <i className="fas fa-wrench" id="active-header-nav-Link-icon"></i>
+                        {user.uid !== 101 ?
+                            <NavLink to="/MyProfile" activeClassName="active-header-nav-Link" exact={true}>
+                                <li>
+                                    <i className="fas fa-wrench" id="active-header-nav-Link-icon"></i>
                                 My Profile
                             </li>
-                        </NavLink>
+                            </NavLink>
+                            :
+                            ''
+                        }
 
                         <NavLink to="/Ask" activeClassName="active-header-nav-Link" exact={true}>
                             <li>
@@ -47,8 +59,15 @@ function Header() {
                 </nav>
 
                 <article className="header-User">
-                    <span className="header-User-LogIn"><Link to="/LogIn">Log In</Link></span>
-                    <span className="header-User-Register"><Link to="/Register">Register</Link></span>
+                    {user.uid === 101 ?
+                        (<>
+                            <span className="header-User-LogIn"><Link to="/LogIn">Log In</Link></span>
+                            <span className="header-User-Register"><Link to="/Register">Register</Link></span>
+                        </>
+                        )
+                        :
+                        <span className="header-User-Logout"><Link to="/Logout">Logout</Link></span>
+                    }
                 </article>
             </div>
         </header>

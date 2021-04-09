@@ -6,7 +6,7 @@ import { storage } from "../../../utils/firebase";
 import { Link } from 'react-router-dom';
 import './RegisterPage.css';
 
-import picHolder from "../../../assets/400.png";
+import picHolder from "../../../assets/300.png";
 import { createNewPhone } from "../../../services/phone-Services";
 
 
@@ -85,6 +85,7 @@ function RegisterPage() {
 
 
         let email = e.target.email.value;
+        let name = e.target.name.value;
         let password = e.target.password.value;
         let rePassword = e.target.repeatPassword.value;
         let phone = e.target.phone.value;
@@ -105,7 +106,7 @@ function RegisterPage() {
 
                 handleUpload(user.uid);
 
-                createNewPhone(user.uid, phone);
+                createNewPhone(user.uid, phone, name);
 
                 console.log(user);
             })
@@ -169,6 +170,10 @@ function RegisterPage() {
                                 <p className="field">
                                     <label>Email</label>
                                     <input type="text" name="email" placeholder="email" />
+                                </p>
+                                <p className="field">
+                                    <label>Name</label>
+                                    <input type="text" name="name" placeholder="name" />
                                 </p>
                                 <p className="field">
                                     <label>Phone</label>

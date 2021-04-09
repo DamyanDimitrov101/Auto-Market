@@ -156,14 +156,13 @@
     margin: auto;
     background: #fff;
     border-radius: 50px;
-    padding:10px 20px;
+    padding: 11px;
 }
 
 .header-User:hover{
     font-size: 17px;
     box-shadow: 2px 0px 6px 3px gold;
 
-    padding:10px 16.5px;
 }
 
 .header-User-LogIn a{
@@ -193,3 +192,16 @@
     margin-left: 10px;
 }
 
+.header-User-Logout a{
+    text-decoration: none;
+    color: rgb(23 154 23);
+    font-weight: bold;
+    padding: 10px 20px;
+
+}
+
+.header-User-Logout a:hover{
+    cursor: pointer;
+    padding:10px 16.5px;
+
+}
