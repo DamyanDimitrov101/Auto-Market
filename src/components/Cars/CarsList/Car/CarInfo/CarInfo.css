@@ -2,7 +2,7 @@
     position: relative;
     top: -26px;
     padding-top: 80px;
-    padding-bottom: 50px;
+    padding-bottom: 100px;
     background: white;
 }
 
@@ -27,7 +27,7 @@
 }
 
 .CarInfo-details-imageWrapper{
-    width: 800px;
+    width: 728px;
     height: 550px;
     padding-left: 32px;
 }
@@ -72,6 +72,81 @@
 
 .CarInfo-wrapper-backBtn{
     margin-bottom: 20px;
+}
+
+
+.contactOwner{
+    padding: 40px;
+    border: 3px solid rgb(23,154,23);
+    width: 92%;
+    border-radius: 17px;
+    font-weight: bolder;
+    display: flex;
+    justify-content: space-between;
+    
+  transition: all 0.25s;
+	box-shadow: 1px 1px 2px #000;
+
+
+
+  background: linear-gradient(-45deg, #fff 0%, #fff 33.33%, rgba(128,128,128,.5), 33.33%, rgba(128,128,128,0.4), 66.66%, #fff 66.66%);
+  
+}
+
+.contactOwner:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+  background: linear-gradient(45deg, #fff 0%, #fff 33.33%, rgb(128 128 128) 33.33%, rgb(23 154 23) 26.66%, #fff 66.66%);
+  font-size: 32px;
+}
+
+.contactOwner-title{
+  font-family: 'Aguafina Script', serif;
+  color: rgb(23,154,23);
+  font-weight: bolder;
+  font-size: 28px;
+  text-transform: uppercase;
+}
+
+.contactOwner-text{
+  color: rgb(23,154,23);
+  font-size: 28px;
+  
+}
+
+
+
+.blur   {
+  filter: blur(50px);
+  -webkit-filter: blur(55px);
+  -moz-filter: blur(55px);
+  -o-filter: blur(55px);
+  -ms-filter: blur(55px);
+}
+
+.numberClick{
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  font-size: 95px;
+  margin-top: -54px;
+  margin-left: -318px;
+  color: rgb(23 154 23);
+  letter-spacing: 5px;
+}
+
+#popup {
+  position: absolute;
+  width: 400px;
+  height: 200px;
+  background: rgb(255,255,255);
+  border: 5px solid rgb(90,90,90);
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  margin: auto;
 }
 
 

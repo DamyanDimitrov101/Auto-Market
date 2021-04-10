@@ -23,35 +23,39 @@
     .noti-wrapper{
       pointer-events: auto; 
       margin-top: 12px;
+      margin-bottom: 12px;
     }
   .notification{
     border-radius:1em;
-    margin:4px;
+    margin:3px;
     text-align:center;
     font-family: "Helvetica";
     position:relative;
-    width:300px;
     height:40px;
     overflow:hidden;
-    background: yellow;
-    padding: 20px;
-    width: 300px;
+    padding: 18px;
+    width: 1290px;
     position: relative;
+
   }
 
   .notification p{
+    font-size: 21px;
     position: absolute;
     top: 13px;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
   }
   
   .success{
-    background: rgb(23 154 23);
+    background: rgba(23,154,23, 0.705);
     color: white;
     
   }
 
-  .danger{
-    background: red;
+  .error{
+    background: rgba(255, 0, 0, 0.705);
     color: white;
     
   }
@@ -76,6 +80,9 @@
     animation-fill-mode:forwards;
   }
 
+  .none{
+    display: none;
+  }
 
   .closed{
     animation-name:close-noti;

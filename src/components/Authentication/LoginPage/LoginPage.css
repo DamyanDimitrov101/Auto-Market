@@ -173,7 +173,7 @@ filter: hue-rotate(40deg);
 
 .auth-container-img{
     font-family: 'Aguafina Script', 'Arial Narrow', Arial, sans-serif;
-    background: linear-gradient(90deg, rgba(23,154,23,0.6931547619047619) 0%,  rgba(255,255,255,0) 100%),url('/src/assets/loginBgPic.png');
+    background: linear-gradient(90deg, rgba(23,154,23,0.4931547619047619) 0%,  rgba(23,154,23,0.2931547619047619) 100%),url('/src/assets/loginBgPic.png');
     
     background-size: cover;
     border-top-left-radius: 15px;

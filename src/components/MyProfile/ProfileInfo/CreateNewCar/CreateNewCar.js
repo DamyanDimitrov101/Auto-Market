@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { storage } from "../../../../utils/firebase";
 
@@ -13,7 +13,7 @@ import './CreateNewCar.css';
 import Notification from "../../../Notifications";
 
 function CreateNewCar({location, history}) {
-    let [user, setUser] = useState({});
+    let [user, setUser] = useContext();
     
     let [stateNotification, setStateNotification] = useState('closed');
     let [messageNotification, setMessageNotification] = useState('');

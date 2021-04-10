@@ -1,8 +1,9 @@
 import firebase from "firebase";
-import React, { useState, useContext } from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 
 import userContext from "../../../contexts/userContext";
+import notificationContext from "../../../contexts/notificationContext";
 
 import { getPhone } from "../../../services/phone-Services";
 import { getUrl } from "../../../services/User-Services";
@@ -11,7 +12,8 @@ import './LoginPage.css';
 
 function LoginPage({ history }) {
     let [user, setUser] = useContext(userContext);
-    const [errorsList, setErrorsList] = useState([]);
+    let [notification, dispatch] = useContext(notificationContext);
+
 
     const signInFormHandler = (e) => {
         e.preventDefault();
@@ -19,12 +21,11 @@ function LoginPage({ history }) {
         let password = e.target.password.value;
 
         if (email.length < 5) {
-            console.log("email must not be empty");
+            dispatch({type: 'ERROR', payload: 'Please fill your email!'});
             return;
         }
 
-        if (!validatePassword(password, setErrorsList)) {
-            console.log(errorsList);
+        if (!validatePassword(password)) {
             return;
         }
 
@@ -47,6 +48,7 @@ function LoginPage({ history }) {
                                     url: url
                                 });
                             });
+                            dispatch({type:'SUCCESS', payload: `Welcome ${resUser.name}!`});
                     });
 
                 history.push('/MyProfile');
@@ -54,22 +56,20 @@ function LoginPage({ history }) {
             .catch((error) => {
                 var errorCode = error.code;
                 var errorMessage = error.message;
-                console.log(errorMessage);
+                dispatch({type:'ERROR', payload: errorMessage});
             });
     }
 
-    function validatePassword(p, setErr) {
-        var errors = [];
+    function validatePassword(p) {
         if (p.length < 6) {
-            errors.push("Your password must be at least 6 characters");
-        }
-        if (p.search(/[a-z]/i) < 0) {
-            errors.push("Your password must contain at least one letter.");
-        }
-        if (errors.length > 0) {
-            setErr(errors);
+            dispatch({type:'ERROR', payload: "Your password must be at least 6 characters"});
             return false;
         }
+        if (p.search(/[a-z]/i) < 0) {
+            dispatch({type:'ERROR', payload: "Your password must contain at least one letter."});            
+            return false;
+        }
+
         return true;
     }
 
@@ -88,7 +88,9 @@ function LoginPage({ history }) {
                     </div>
                     <div className="auth-container-content">
                         <form className="auth-form" onSubmit={signInFormHandler}>
+                            <Link to="/Cars">
                             <button type="button" className="buttonX">X</button>
+                            </Link>
                             <h1>Login</h1>
                             <p className="field">
                                 <label className="field-text">Email</label>

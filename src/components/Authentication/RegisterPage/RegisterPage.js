@@ -1,10 +1,12 @@
 import firebase from "firebase";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { storage } from "../../../utils/firebase";
 
 
 import { Link } from 'react-router-dom';
 import './RegisterPage.css';
+
+import notificationContext from "../../../contexts/notificationContext";
 
 import picHolder from "../../../assets/300.png";
 import { createNewPhone } from "../../../services/phone-Services";
@@ -15,6 +17,8 @@ function RegisterPage() {
     let [progress, setProgress] = useState(0);
     let [url, setUrl] = useState("");
     const [errorsList, setErrorsList] = useState([]);
+    let [notification, dispatch] = useContext(notificationContext);
+
 
 
 
@@ -45,8 +49,8 @@ function RegisterPage() {
 
     const handleChangePhotoUpload = e => {
         if (e.target.files[0]) {
-            setImage(e.target.files[0]);
 
+            setImage(e.target.files[0]);
 
             const uploadTask = storage.ref(`temp/${e.target.files[0].name}`).put(e.target.files[0]);
 
@@ -79,9 +83,13 @@ function RegisterPage() {
     const onRegisterSubmitHandler = (e) => {
         e.preventDefault();
 
-
-        const photoRef = storage.refFromURL(url);
-        photoRef.delete();
+        if (url!=='') {            
+            const photoRef = storage.refFromURL(url);
+            photoRef.delete();
+        }else{
+            dispatch({type:'ERROR', payload: "Please upload photo!"});
+            return;
+        }
 
 
         let email = e.target.email.value;
@@ -90,13 +98,27 @@ function RegisterPage() {
         let rePassword = e.target.repeatPassword.value;
         let phone = e.target.phone.value;
 
-        if (password !== rePassword) {
-            console.log('Pass do not match!');
+        if (email=='') {
+            dispatch({type:'ERROR', payload: "Please provide email!"});
             return;
         }
 
-        if (!validatePassword(password, setErrorsList)) {
-            console.log(errorsList);
+        if (name=='') {
+            dispatch({type:'ERROR', payload: "Please provide name!"});
+            return;
+        }
+
+        if (phone=='') {
+            dispatch({type:'ERROR', payload: "Please provide phone!"});
+            return;
+        }
+
+        if (!validatePassword(password)) {
+            return;
+        }
+
+        if (password !== rePassword) {
+            dispatch({ type: 'ERROR', payload: `Passwords do not match!` });
             return;
         }
 
@@ -118,16 +140,13 @@ function RegisterPage() {
     }
 
 
-    function validatePassword(p, setErr) {
-        var errors = [];
+    function validatePassword(p) {
         if (p.length < 6) {
-            errors.push("Your password must be at least 6 characters");
+            dispatch({ type: 'ERROR', payload: "Your password must be at least 6 characters!" });
+            return false;
         }
         if (p.search(/[a-z]/i) < 0) {
-            errors.push("Your password must contain at least one letter.");
-        }
-        if (errors.length > 0) {
-            setErr(errors);
+            dispatch({ type: 'ERROR', payload: "Your password must contain at least one letter." });
             return false;
         }
         return true;
@@ -165,7 +184,9 @@ function RegisterPage() {
                         </div>
                         <div className="auth-container-content">
                             <form className="auth-form" onSubmit={onRegisterSubmitHandler}>
-                                <button type="button" className="buttonX">X</button>
+                                <Link to="/Login">
+                                    <button type="button" className="buttonX">X</button>
+                                </Link>
                                 <h1>Register</h1>
                                 <p className="field">
                                     <label>Email</label>
