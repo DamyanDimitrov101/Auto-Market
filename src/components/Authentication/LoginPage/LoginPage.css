@@ -258,7 +258,7 @@ filter: hue-rotate(40deg);
 
 .registerSuggest{
     width: fit-content;
-    margin: 0 auto;
+    margin: 20px auto;
 }
 
 .registerSuggest a{

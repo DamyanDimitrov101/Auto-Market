@@ -83,8 +83,8 @@ function Cars() {
 
                         <CarListLazyComponent
                             cars={cars}
-                            //              setCars={setCars} 
                             greenAsc={greenAsc}
+                            showSort={true}
                             greenDesc={greenDesc}
                             sortByPriceDesc={sortByPriceDesc}
                             sortByPriceAsc={sortByPriceAsc}

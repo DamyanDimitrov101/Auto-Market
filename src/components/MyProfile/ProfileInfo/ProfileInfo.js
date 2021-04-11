@@ -12,15 +12,15 @@ function ProfileInfo({profilData}) {
                 <label htmlFor="photo">
                     <img className="ProfileInfo-photo-img" src={profilData.url}></img>
                 </label>
-                <label htmlFor="name">
+                <label htmlFor="name" className="labelProfilInfo">
                     Name:
                     <p>{profilData.name}</p>
                 </label>
-                <label htmlFor="phone">
+                <label htmlFor="phone" className="labelProfilInfo">
                     Phone:
                     <p>{profilData.phone}</p>
                 </label>
-                <label htmlFor="email">
+                <label htmlFor="email" className="labelProfilInfo">
                     Email:
                     <p>{profilData.email}</p>
                 </label>

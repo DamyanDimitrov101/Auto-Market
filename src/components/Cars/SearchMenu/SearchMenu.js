@@ -95,6 +95,7 @@ function SearchMenu({ onMenuSearchSubmit, setModel }) {
                         <option value="All">All</option>
 
                         <option value="gasoline">gasoline</option>
+                        <option value="electric">electric</option>
                         <option value="diesel">diesel</option>
                     </select>
                 </label>

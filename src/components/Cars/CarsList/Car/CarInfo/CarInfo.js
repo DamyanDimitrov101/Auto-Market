@@ -8,6 +8,7 @@ import { InputError, onInputBlur } from "../../../../shared/inputError";
 import { ConfirmBox, handleConfirmationBox } from "../../../../shared/confirmBox";
 
 import userContext from "../../../../../contexts/userContext";
+import notificationContext from "../../../../../contexts/notificationContext";
 
 
 import './CarInfo.css';
@@ -17,6 +18,7 @@ function CarInfo({
     match
 }) {
     let [user, setUser] = useContext(userContext);
+    let [notification, dispatch] = useContext(notificationContext);
 
     let [car, setCar] = useState({});
     let [phone, setPhone] = useState('');
@@ -56,6 +58,18 @@ function CarInfo({
     const handleEditTask = (e) => {
         e.preventDefault();
         const { make, model, fuel, year, transmission, color, comment } = e.target.parentNode.parentNode.parentNode.parentNode;
+        
+        if (make.value=='' || 
+            model.value==''||
+            fuel.value==''||
+            year.value==''||
+            transmission.value==''||
+            color.value==''||
+            comment.value=='') {
+                dispatch({type:'ERROR', payload: `Please fill all the inputs!`});
+                return;
+        }
+
         let updatedCar = {
             make: make.value,
             model: model.value,
@@ -67,17 +81,19 @@ function CarInfo({
         };
         editCar(car.id, car, updatedCar)
             .then(res => {
-                history.push('/Cars');
+                history.push(`/MyProfile`);
+                dispatch({type:'SUCCESS', payload: `The car was successfully edited!`});
             })
-
-    };
-
-    const handleDeleteTask = (e) => {
-        e.preventDefault();
-
-        deleteCar(car.id)
+            
+        };
+        
+        const handleDeleteTask = (e) => {
+            e.preventDefault();
+            
+            deleteCar(car.id)
             .then(res => {
-                history.push('/Cars');
+                history.push('/MyProfile');
+                dispatch({type:'SUCCESS', payload: `The car was successfully deleted!`});
             });
 
     };

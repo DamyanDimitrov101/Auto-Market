@@ -26,6 +26,7 @@ export const createNewCar = async (
       make,
       model,
       year,
+      price,
       transmission,
       fuel,
       id,
@@ -34,7 +35,7 @@ export const createNewCar = async (
    },
    ownerId) => {
 
-   let res = await request(`${api.cars}`, 'POST', { picture, make, model, year, transmission, fuel, color, comment, ownerId, id });
+   let res = await request(`${api.cars}`, 'POST', { picture, make, price, model, year, transmission, fuel, color, comment, ownerId, id });
 
    let name = res.name;
 

@@ -48,7 +48,7 @@ function LoginPage({ history }) {
                                     url: url
                                 });
                             });
-                            dispatch({type:'SUCCESS', payload: `Welcome ${resUser.name}!`});
+                            dispatch({type:'SUCCESS', payload: `Welcome ${resUser?.name}!`});
                     });
 
                 history.push('/MyProfile');

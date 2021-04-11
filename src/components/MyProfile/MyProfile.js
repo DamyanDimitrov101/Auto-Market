@@ -67,6 +67,7 @@ function MyProfile() {
                     <CarsList cars={cars}
                         greenAsc={greenAsc}
                         greenDesc={greenDesc}
+                        showSort={false}
                         sortByPriceDesc={sortByPriceDesc}
                         sortByPriceAsc={sortByPriceAsc}
                         className="Cars-CarsList" />

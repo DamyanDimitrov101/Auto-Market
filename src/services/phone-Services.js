@@ -12,10 +12,8 @@ export const createNewPhone = async (
    return res;
 }
 
-export const getPhone = async (   
-      uid
-   ) => {
-      
+export const getPhone = async (uid) => {
+   console.log(uid);      
       let res = await request(`${api.phone+uid+'.json'}`, 'Get');
       
 

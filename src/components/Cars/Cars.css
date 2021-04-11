@@ -4,10 +4,11 @@
     padding-top: 80px;
     padding-bottom: 50px;
     background: white;
-}
-
-.Cars{
-    margin: 0 auto;
+  }
+  
+  .Cars{
+  
+    margin: 20px auto;
     max-width: 1290px;
     display: flex;    
     justify-content: space-between;

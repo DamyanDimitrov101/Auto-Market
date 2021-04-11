@@ -11,9 +11,13 @@ import picHolder from "../../../../assets/400.png";
 
 import './CreateNewCar.css';
 import Notification from "../../../Notifications";
+import userContext from "../../../../contexts/userContext";
+import notificationContext from "../../../../contexts/notificationContext";
 
 function CreateNewCar({location, history}) {
-    let [user, setUser] = useContext();
+    let [user, setUser] = useContext(userContext);
+    let [notification, dispatch] = useContext(notificationContext);
+
     
     let [stateNotification, setStateNotification] = useState('closed');
     let [messageNotification, setMessageNotification] = useState('');
@@ -38,7 +42,7 @@ function CreateNewCar({location, history}) {
     const { value: transmission, bind: BindTransmission, reset: resetTransmission } = useInput('');
     const { value: fuel, bind: BindFuel, reset: resetFuel } = useInput('');
     const { value: comment, bind: BindComment, reset: resetComment } = useInput('');
-    const { value: price, bind: BindPrice, reset: resetPrice } = useInput('');
+    const { value: price, bind: BindPrice, reset: resetPrice } = useInput(0);
 
 
     useEffect(() => {
@@ -103,10 +107,12 @@ function CreateNewCar({location, history}) {
             triggerValidationDiv(year, setYearError);
             triggerValidationDiv(transmission, setTransmissionError);
 
-
+            
 
             setTypeNotification('danger');
             setMessageNotification('Please fill in all the fields!');
+            dispatch({type:'ERROR', payload: `Please fill in all the fields!`});
+
             return setStateNotification('opened');
         }
 
@@ -122,9 +128,10 @@ function CreateNewCar({location, history}) {
             transmission: transmission,
             comment: comment
         };
-
-        let res = await createNewCar(carNew, 1);
+        let res = await createNewCar(carNew, user.uid);
               
+        dispatch({type:'SUCCESS', payload: `Your car has been added!`});
+
         history.push('/MyProfile');
 
         return res;

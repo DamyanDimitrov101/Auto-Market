@@ -20,6 +20,7 @@ export function getOwnerPhone(uid) {
             return res.json()
         })
         .then(res=>{
+            console.log(res);
             return res.phone;
         })
         .catch(err => console.log(err));
