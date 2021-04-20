@@ -22,6 +22,8 @@ import notificationContext from "./contexts/notificationContext";
 
 import notificationReducer from "./reducers/notificationReducer";
 
+import ErrorBoundary from "./components/ErrorBoundary";
+
 import './App.css';
 
 
@@ -38,6 +40,8 @@ function App() {
 
           <Notifications state={notification.state} message={notification.message} />
 
+          <ErrorBoundary>
+
           <Switch>
             <Route path="/" component={LandingPage} exact />
 
@@ -52,6 +56,8 @@ function App() {
             <Route path="/CarInfo/:id" component={CarInfo} exact />
             <Route render={() => ErrorPage()} />
           </Switch>
+
+          </ErrorBoundary>
 
         </notificationContext.Provider >
       </userContext.Provider>
