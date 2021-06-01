@@ -37,8 +37,8 @@ class Ask extends Component {
     handleCheckboxChange = event =>
       this.setState({ checked: event.target.checked })
       
-      onAskFormSubmitHandler(e){
-          e.preventDefault();
+    onAskFormSubmitHandler(e){
+        e.preventDefault();
           
         let name = e.target.name.value;
         let email = e.target.email.value;
@@ -72,7 +72,7 @@ class Ask extends Component {
            return console.log('Please accept the Terms and Conditions!');    
         }
 
-        createNewQuestion(name,email,text)
+    createNewQuestion(name,email,text)
                 .then(res=> {
                     this.context[1]({type: 'SUCCESS', payload: 'Your question has been submited!'});
                     this.props.history.push('/Cars');
@@ -94,11 +94,11 @@ class Ask extends Component {
                     <article className={styles.askFormWrapper}>
                         <h1 className={styles.askFormTitle}>Don’t hesitate to let us know if you have any questions or comments!</h1>
                         <p className={styles.askFormSubTitle}>We will reach you by the email provided in the next couple of hours..</p>
-                        <form action="" className={styles.askForm} onSubmit={(e) => this.onAskFormSubmitHandler(e)}>
+                        <form id={'ask-form'} className={styles.askForm} onSubmit={(e) => this.onAskFormSubmitHandler(e)}>
                             <article className={styles.askFormUserInfo}>
                             <label htmlFor="name" className={styles.askFormNameArea}>Name*:
                             
-                            <input type="name" name="name" ref={this.nameInput} className={styles.askFormInput} autoFocus />
+                            <input type="name" name="name" label="email" ref={this.nameInput} className={styles.askFormInput} autoFocus />
                                 <InputError>{this.state.nameShow}</InputError>
                             </label>
 
@@ -122,7 +122,7 @@ class Ask extends Component {
                                 className={styles.askFormTermsAndCond+" checkBox"} />
                             </label>
 
-                            <input type="submit" className={styles.AskFormSend+" submitBtn"} />
+                            <input type="submit" className={styles.AskFormSend+" submitBtn"}  data-testid="submitAskForm"/>
                         </form>
                     </article>
                 </section>

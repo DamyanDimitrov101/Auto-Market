@@ -12,6 +12,9 @@ export const useFetch = (url, initialValue) => {
         setValue(Object.values(res));
         setIsLoading(false);
       })
+      .catch(err=>{
+        throw new Error('Cars not fetched!');
+      })
   }, [url]);
 
   return [

@@ -15,13 +15,13 @@ export const getMakes = () => {
     // });
 
     return request(api.cars)
-        .then(data => {
+        .then(data => {            
             let res = Object.values(data)
                 .map(d => d.make);
 
             return [... new Set(res)];
         })
-        .catch(err => console.log(err));
+        .catch(err => {return new Error('Makes not set!')});
 }
 
 export const getModels = (make) => {
@@ -32,7 +32,7 @@ export const getModels = (make) => {
                 .filter(d => d.make === make)
                 .map(d => d.model);
         })
-        .catch(err => console.log(err));
+        .catch(err => {return new Error('Models not set!')});
 }
 
 export const getColors = () => {
@@ -45,7 +45,7 @@ export const getColors = () => {
             return [... new Set(res)];
 
         })
-        .catch(err => console.log(err));
+        .catch(err => {return new Error('Colors not set!')});
 }
 
 export const getFilteredCars = async (
